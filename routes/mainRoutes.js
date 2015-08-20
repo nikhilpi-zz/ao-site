@@ -7,6 +7,14 @@ Router.route('/', {
   }
 });
 
+Router.route('/news', {
+  name: 'news',
+  action: function () {
+    this.render('news');
+    SEO.set({ title: 'News - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/gallery', {
   name: 'gallery',
   action: function () {

@@ -5,3 +5,6 @@ Twit = new TwitMaker({
   , access_token: '382749492-CnzrT1XzFXM3ZyOWH76zjgY3QtSe42im6n4bMOk3'
   , access_token_secret: 'PD24YMNFcfhApT1uZoT2dwM4fCIHpW5ITlUWQHzcfSGet'
 });
+
+ig.use({ client_id: '223eed83d6de4d93b5f6668d031be84f',
+         client_secret: '1c9640367dbe47749a217c5f24ba371e' });

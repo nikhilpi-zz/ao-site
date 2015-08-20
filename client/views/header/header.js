@@ -11,5 +11,9 @@ Template['header'].events({
     $('#nav-icon3').toggleClass('open');
     return false;
   },
+  'click a': function (event) {
+    $('body').toggleClass('show-nav');
+     $('#nav-icon3').toggleClass('open');
+  }
 });
 

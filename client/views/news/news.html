@@ -1,0 +1,45 @@
+<template name="news">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      {{#each stream}}
+        <div class="col-md-3 col-sm-6 col-xs-12 {{#unless isPhone}}h{{/unless}}">
+          {{#if equal social_type "insta"}}
+            {{> insta_block}}
+          {{/if}}
+          {{#if equal social_type "fb"}}
+            {{> fb_block}}
+          {{/if}}
+          {{#if equal social_type "tweet"}}
+            {{> tweet_block}}
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+
+<template name="insta_block">
+  <div class="social_block insta">
+    <figure>
+      <img class="img-responsive overlay" src="{{this.images.standard_resolution.url}}">
+      <figcaption>
+        <h3>{{caption.text}}</h3>
+        <span>{{formatDate created_time}}</span>
+        <a href="{{link}}" target="_blank"><i class="fa fa-instagram"></i></a>
+      </figcaption>
+    </figure>
+  </div>
+</template>
+
+<template name="fb_block">
+  <div class="social_block">
+    {{social_type}}
+  </div>
+</template>
+
+<template name="tweet_block">
+  <div class="social_block">
+    {{social_type}}
+  </div>
+</template>
