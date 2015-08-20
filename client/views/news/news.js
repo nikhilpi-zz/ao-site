@@ -13,3 +13,11 @@ Template['news'].onRendered(function() {
     Session.set('stream', stream);
   });
 });
+
+Template['fb_block'].helpers({
+  'fbImage': function(id) {
+    Meteor.call('getFB', id, function(err, data) {
+      $('img[data-fb-id="'+id+'"]').attr("src", data.source);         
+    });
+  }
+});

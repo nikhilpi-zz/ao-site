@@ -32,14 +32,32 @@
   </div>
 </template>
 
-<template name="fb_block">
-  <div class="social_block">
-    {{social_type}}
+<template name="tweet_block">
+  <div class="social_block tweet">
+    <figure>
+      <h2>{{text}}</h2>
+      <figcaption>
+        <h3>@aoproductions</h3>
+        <span>{{formatDate created_time}}</span>
+        <a href="https://twitter.com/aoproductions" target="_blank"><i class="fa fa-twitter"></i></a>
+      </figcaption>
+    </figure>
   </div>
 </template>
 
-<template name="tweet_block">
-  <div class="social_block">
-    {{social_type}}
-  </div>
+<template name="fb_block">
+  {{#if equal type "photo"}}
+    <div class="social_block">
+      <div class="social_block insta">
+        <figure>
+          <img data-fb-id="{{object_id}}" class="img-responsive overlay" src="{{fbImage object_id}}">
+          <figcaption>
+            <h3>{{message}}</h3>
+            <span>{{formatDate created_time}}</span>
+            <a href="{{link}}" target="_blank"><i class="fa fa-instagram"></i></a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  {{/if}}
 </template>

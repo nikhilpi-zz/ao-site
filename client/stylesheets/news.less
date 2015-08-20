@@ -6,78 +6,163 @@
 .social_block {
   padding: 0;
   overflow: visible;
-  figure {
-    margin: 0;
-    img {
-      z-index: 10;
-      -webkit-transition: -webkit-transform 0.4s;
-      -moz-transition: -moz-transform 0.4s;
-      transition: transform 0.4s;
-      position: relative;
+
+  &.insta {
+    figure {
+      margin: 0;
+      img {
+        z-index: 10;
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+        position: relative;
+      }
+      &:hover {
+        img{
+          -webkit-transform: scale(0.4);
+          -moz-transform: scale(0.4);
+          -ms-transform: scale(0.4);
+          transform: scale(0.4);
+        }
+
+        figcaption {
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     }
-    &:hover {
-      img{
-        -webkit-transform: scale(0.4);
-        -moz-transform: scale(0.4);
-        -ms-transform: scale(0.4);
-        transform: scale(0.4);
+
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: #2c3f52;
+      color: #ed4e6e;
+
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transform: scale(0.7);
+      -moz-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+      transition: transform 0.4s, opacity 0.4s;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
-      figcaption {
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
+      span {
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #ed4e6e;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
       }
     }
   }
 
-  figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    background: #2c3f52;
-    color: #ed4e6e;
-
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-    -moz-transition: -moz-transform 0.4s, opacity 0.4s;
-    transition: transform 0.4s, opacity 0.4s;
-
-    h3 {
+  &.tweet {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: @cyan;
+    color: white;
+    figure {
       margin: 0;
-      padding: 0;
-      color: #fff;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+      h2 {
+        z-index: 10;
+        -webkit-transition: -webkit-transform 0.4s;
+        -moz-transition: -moz-transform 0.4s;
+        transition: transform 0.4s;
+        position: relative;
+        max-height: 300px;
+        overflow: hidden;
+      }
+      &:hover {
+        h2{
+          -webkit-transform: scale(0.4);
+          -moz-transform: scale(0.4);
+          -ms-transform: scale(0.4);
+          transform: scale(0.4);
+        }
+
+        figcaption {
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     }
 
-    span {
-    }
-
-    a {
-      text-decoration: none;
-      text-align: center;
-      padding: 5px 10px;
-      border-radius: 2px;
-      display: inline-block;
-      background: #ed4e6e;
-      color: #fff;
+    figcaption {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background: transparent;
+
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transform: scale(0.7);
+      -moz-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+      -moz-transition: -moz-transform 0.4s, opacity 0.4s;
+      transition: transform 0.4s, opacity 0.4s;
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      span {
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #ed4e6e;
+        color: #fff;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
     }
   }
 }
