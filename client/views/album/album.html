@@ -1,0 +1,12 @@
+<template name="album">
+  <div class="container-fluid">
+    <h1>{{album.name}}</h1>
+    <div class="row">
+      {{#each album.photos}}
+        <div class="col-md-3">
+            <img src="{{source}}" class="img-responsive">
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>

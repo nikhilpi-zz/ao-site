@@ -4,13 +4,10 @@ Meteor.methods({
         return data;
     },
     getTwit: function () {
-        Future = Npm.require('fibers/future');
-        var future = new Future();
+        var twit_get = Meteor.wrapAsync(Twit.get,Twit);
 
-        Twit.get('statuses/user_timeline', { user_id: '28911550' }, function (err, data, response) {
-            future.return(data);
-        });
-        return future.wait();
+        var tweets = twit_get('statuses/user_timeline', {user_id: '28911550'});
+        return tweets;
     },
     getInsta: function(){
         var url = "https://api.instagram.com/v1/users/1549263314/media/recent/?client_id=223eed83d6de4d93b5f6668d031be84f";
@@ -30,6 +27,26 @@ Meteor.methods({
     getFBPastYearEvents: function(){
       var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
       var upcoming_events = fb_get('/7625215495/events?since=1417508443');
+      return upcoming_events;
+    },
+    getFBAlbums: function(){
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var albums = fb_get('/7625215495/albums');
+      return albums;
+    },
+    getFBAlbumsAfter: function(date){
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var albums = fb_get('/7625215495/albums?after='+date);
+      return albums;
+    },
+    getFBImg: function(id){
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var img = fb_get(id);
+      return img;
+    },
+    getFB: function(query){
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var upcoming_events = fb_get(query);
       return upcoming_events;
     },
 });
