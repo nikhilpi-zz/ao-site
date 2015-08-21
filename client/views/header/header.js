@@ -1,5 +1,7 @@
 Template['header'].helpers({
-
+  'name': function() {
+    return Router.current().route.getName();
+  }
 });
 
 Template['header'].events({
@@ -17,3 +19,15 @@ Template['header'].events({
   }
 });
 
+Template['header'].onRendered(function() {
+  var nav =  $(".nav");
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll > 0) {
+      nav.addClass("scroll");
+    } else {
+      nav.removeClass("scroll");
+    }
+  });
+});
