@@ -24,7 +24,7 @@ Template['news'].onRendered(function() {
     
     timer = setTimeout(function(){
       body.classList.remove('disable-hover')
-    },500);
+    },200);
   }, false);
 });
 
