@@ -17,7 +17,7 @@ Template['news'].onRendered(function() {
 Template['fb_block'].helpers({
   'fbImage': function(id) {
     Meteor.call('getFB', id, function(err, data) {
-      $('img[data-fb-id="'+id+'"]').attr("src", data.source);         
+      $('div[data-fb-id="'+id+'"]').attr("style", 'background-image: url("'+data.source+'");');         
     });
   }
 });

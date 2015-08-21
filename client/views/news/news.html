@@ -1,6 +1,6 @@
 <template name="news">
   <div class="container-fluid">
-    <div class="row no-gutter">
+    <div class="row">
       {{#each stream}}
         <div class="col-md-3 col-sm-6 col-xs-12 {{#unless isPhone}}h{{/unless}}">
           {{#if equal social_type "insta"}}
@@ -47,17 +47,51 @@
 
 <template name="fb_block">
   {{#if equal type "photo"}}
-    <div class="social_block">
-      <div class="social_block insta">
+      <div class="social_block fb">
         <figure>
-          <img data-fb-id="{{object_id}}" class="img-responsive overlay" src="{{fbImage object_id}}">
+          <div data-fb-id="{{object_id}}" class="cover_img" style="background-image: url('{{fbImage object_id}}');"></div>
           <figcaption>
             <h3>{{message}}</h3>
             <span>{{formatDate created_time}}</span>
-            <a href="{{link}}" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
           </figcaption>
         </figure>
       </div>
+  {{/if}}
+  {{#if equal type "link"}}
+      <div class="social_block fb">
+        <figure class="text">
+          <h2>{{message}}</h2>
+          <figcaption>
+            <h3>{{caption}}</h3>
+            <span>{{formatDate created_time}}</span>
+            <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
+          </figcaption>
+        </figure>
+      </div>
+  {{/if}}
+  {{#if equal type "status"}}
+      <div class="social_block fb">
+        <figure class="text">
+          <h2>{{message}}</h2>
+          <figcaption>
+            <h3>{{likes.data.length}} likes</h3>
+            <span>{{formatDate created_time}}</span>
+            <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
+          </figcaption>
+        </figure>
+      </div>
+  {{/if}}
+  {{#if equal type "event"}}
+    <div class="social_block fb">
+      <figure class="text event">
+        <h2>{{name}}:<br>{{message}}</h2>
+        <figcaption>
+          <h3>{{likes.data.length}} likes</h3>
+          <span>{{formatDate created_time}}</span>
+          <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
+        </figcaption>
+      </figure>
     </div>
   {{/if}}
 </template>

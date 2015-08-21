@@ -45,8 +45,10 @@ Meteor.methods({
         var stream = posts.concat(pics).concat(tweets);
 
         stream.sort(function(a,b) { 
-            return a.created_time - b.created_time;
+            return b.created_time - a.created_time;
         });
+
+        if (stream.length % 2 == 1) stream.pop();
 
         return stream;
     }

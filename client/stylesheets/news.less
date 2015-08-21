@@ -3,38 +3,22 @@
 @import 'lib/elements';
 @import 'lib/square.import.less';
 
-.social_block {
-  padding: 0;
-  overflow: visible;
+.social_block, .h > div.social_block {
+  padding: 15px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  color: white;
 
-  &.insta {
-    figure {
+  figure {
+    img, h2, .cover_img {
+      z-index: 10;
+      .transition-duration(0.4s);
+      position: relative;
+      max-height: 100%;
+      overflow: hidden;
       margin: 0;
-      img {
-        z-index: 10;
-        -webkit-transition: -webkit-transform 0.4s;
-        -moz-transition: -moz-transform 0.4s;
-        transition: transform 0.4s;
-        position: relative;
-      }
-      &:hover {
-        img{
-          -webkit-transform: scale(0.4);
-          -moz-transform: scale(0.4);
-          -ms-transform: scale(0.4);
-          transform: scale(0.4);
-        }
-
-        figcaption {
-          -webkit-transform: scale(1);
-          -moz-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
     }
-
     figcaption {
       position: absolute;
       top: 0;
@@ -46,10 +30,7 @@
       height: 100%;
       width: 100%;
       opacity: 0;
-      -webkit-transform: scale(0.7);
-      -moz-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-      transform: scale(0.7);
+      .transform(scale(0.7));
       -webkit-backface-visibility: hidden;
       -moz-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -80,88 +61,60 @@
         position: absolute;
         bottom: 20px;
         right: 20px;
+      }
+    }
+    &:hover {
+      img,h2, .cover_img {
+        .transform(scale(0.4));
+      }
+
+      figcaption {
+        .transform(scale(1));;
+        opacity: 1;
       }
     }
   }
 
-  &.tweet {
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: @cyan;
-    color: white;
+  &.insta {
     figure {
+      background-color: @yellow;
       margin: 0;
-      h2 {
-        z-index: 10;
-        -webkit-transition: -webkit-transform 0.4s;
-        -moz-transition: -moz-transform 0.4s;
-        transition: transform 0.4s;
-        position: relative;
-        max-height: 300px;
-        overflow: hidden;
-      }
-      &:hover {
-        h2{
-          -webkit-transform: scale(0.4);
-          -moz-transform: scale(0.4);
-          -ms-transform: scale(0.4);
-          transform: scale(0.4);
-        }
-
-        figcaption {
-          -webkit-transform: scale(1);
-          -moz-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
     }
+  }
 
-    figcaption {
-      position: absolute;
-      top: 0;
-      left: 0;
+  &.tweet {
+    figure {
+      background-color: @cyan;
       padding: 20px;
-      background: transparent;
+      margin: 0;
+      height: 100%;
+    }
+  }
 
+  &.fb {
+    figure {
+      background-color: @magenta;
+      &.event {
+        background-color: @yellow;
+        color: @grey;
+      }
+      margin: 0;
       height: 100%;
       width: 100%;
-      opacity: 0;
-      -webkit-transform: scale(0.7);
-      -moz-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-      transform: scale(0.7);
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
-      -moz-transition: -moz-transform 0.4s, opacity 0.4s;
-      transition: transform 0.4s, opacity 0.4s;
-
-      h3 {
-        margin: 0;
-        padding: 0;
-        color: #fff;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+      &.text{
+        padding: 20px;
+      }
+      .cover_img {
+        background: @magenta no-repeat center;
+        background-size: cover; 
+        height: 100%;
+        width: 100%;
       }
 
-      span {
-      }
-
-      a {
-        text-decoration: none;
-        text-align: center;
-        padding: 5px 10px;
-        border-radius: 2px;
-        display: inline-block;
-        background: #ed4e6e;
-        color: #fff;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+      &:hover {
+        .cover_img, h2{
+          color: white;
+        }
       }
     }
   }
