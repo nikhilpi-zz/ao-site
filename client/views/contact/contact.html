@@ -1,0 +1,17 @@
+<template name="contact">
+  <div class="container top_padding">
+    <div class="row">
+      <h1 class="text-center">Contact us:</h1>
+      {{#each emails}}
+        <section>
+          <div class="col-md-3 col-md-offset-2">
+            <h1 class="text-right"><span class="{{color}}_label">{{name}}: </span></h1>
+          </div>
+          <div class="col-md-4">
+            <h1><span class="tiny_padding"><a href="mailto:{{email}}">{{email}}</a></span></h1>
+          </div>
+        </section>
+      {{/each}}
+    </div>
+  </div>
+</template>

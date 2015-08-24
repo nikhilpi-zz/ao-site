@@ -15,6 +15,22 @@ Router.route('/news', {
   }
 });
 
+Router.route('/about', {
+  name: 'about',
+  action: function () {
+    this.render('about');
+    SEO.set({ title: 'About - ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/contact', {
+  name: 'contact',
+  action: function () {
+    this.render('contact');
+    SEO.set({ title: 'Contact - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/gallery', {
   name: 'gallery',
   action: function () {
