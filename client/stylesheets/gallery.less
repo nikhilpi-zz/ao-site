@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'lib/elements';
+@import 'lib/square.import.less';
 
 .gallery-carousel {
   .item {
@@ -31,7 +32,83 @@
   }
 }
 
+.album_preview {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+
+  a {
+    text-decoration: none;
+  }
+
+  figure {
+    margin: 0;
+    width: 350px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 50px;
+    position: absolute;
+    .cover_img {
+      background: @grey no-repeat center;
+      background-size: cover; 
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  figcaption {
+    background-color: @cyan;
+    color: white;
+    width: 350px;
+    height: 350px;
+    padding-top: 5px;
+    padding-left: 5px;
+    
+    h3 {
+      color: white;
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      min-height: 27px;
+    }
+  }
+}
+
 @media (max-width: @phoneWidth) {
+  .album_preview {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 50px;
+
+    figure {
+      margin: 0;
+      width: 250px;
+      height: 250px;
+      margin-top: 50px;
+      margin-left: 50px;
+      position: absolute;
+    }
+
+    figcaption {
+      background-color: @cyan;
+      color: white;
+      width: 250px;
+      height: 250px;
+      
+      h3 {
+        color: white;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        min-height: 27px;
+      }
+    }
+  }
+
   .gallery-carousel {
     .owl-next, .owl-prev {
       visibility: hidden;

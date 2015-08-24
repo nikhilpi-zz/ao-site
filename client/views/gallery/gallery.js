@@ -6,8 +6,9 @@ Template['gallery'].helpers({
 
   'img': function(id) {
     var img = Session.get(id);
+    console.log(img);
     return img.source || '';
-  }
+  },
 });
 
 Template['gallery'].events({
@@ -24,6 +25,7 @@ Template['gallery'].onRendered(function () {
         img_ids.push(album.cover_photo);
       }
     });
+    console.log(filter_albums);
     Session.set('albums', filter_albums);
 
     Meteor.call('getFBBatch',img_ids, function(error, imgs) {
