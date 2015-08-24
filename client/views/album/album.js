@@ -20,9 +20,13 @@ Template['album'].onRendered(function() {
   if (!Session.get(this.data.id)){
     Meteor.call('getFB', self.data.id, function(error, album) {
       Session.set(self.data.id, album);
+      Session.set('page_name',self.data.name);
     });
+  } else {
+    var album = Session.get(this.data.id)
+    Session.set('page_name',album.name);
   }
-
+  
   var owl_options = {
     autoPlay: true,
     autoplaySpeed : 200,
@@ -32,7 +36,7 @@ Template['album'].onRendered(function() {
     navText: ['',''],
     loop: true,
     autoHeight: false
-  }
+  };
 
   $(".owl-carousel").owlCarousel(owl_options);
   owl = $(".owl-carousel").data('owlCarousel');
@@ -42,7 +46,7 @@ Template['album'].onRendered(function() {
     album.photos = photos.data;
     Session.set(self.data.id, album);
     _.each(album.photos.reverse(), function(photo){
-      owl.addItem('<div class="item"><a href="'+photo.link+'" target="_blank"><img src="'+photo.source+'" alt="loading..."></a></div>');
+      owl.addItem('<div class="item"><img src="'+photo.source+'" alt="loading..."></div>');
     });
     $('.owl-next,.owl-prev').removeClass('disabled');
   });

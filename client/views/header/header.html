@@ -1,7 +1,7 @@
 <template name="header">
   <div class="nav">
     <div id="logo">
-      <h3>{{name}}</h3>
+      <h3 class="no_margins"><a href="{{pathFor route='home'}}"><img src="/images/ao-white.svg"></a> {{name}}</h3>
     </div>
     <div id="nav-icon3" class="toggle-nav">
       <span></span>
@@ -13,7 +13,7 @@
   <nav id="body-nav">
     <ul>
       <li><a href="{{pathFor route='home'}}">Home</a></li>
-      <li><a href="#">Calendar</a></li>
+      <li><a href="{{pathFor route='calendar'}}">Calendar</a></li>
       <li><a href="{{pathFor route='gallery'}}">Gallery</a></li>
       <li><a href="{{pathFor route='news'}}">News</a></li>
       <li><a href="{{pathFor route='about'}}">About</a></li>

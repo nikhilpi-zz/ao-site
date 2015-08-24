@@ -1,6 +1,7 @@
 <template name="news">
   <div class="container">
     <div class="row">
+      {{#if stream}}
       {{#each stream}}
         <div class="col-md-3 col-sm-6 col-xs-12 {{#unless isPhone}}h{{/unless}}">
           {{#if equal social_type "insta"}}
@@ -14,6 +15,11 @@
           {{/if}}
         </div>
       {{/each}}
+      {{else}}
+        <div class="col-md-12 text-center">
+          <img class="img-responsive" src="/images/ao.svg"/>
+        </div>
+      {{/if}}
     </div>
   </div>
 </template>

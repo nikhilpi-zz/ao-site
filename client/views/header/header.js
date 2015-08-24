@@ -1,6 +1,6 @@
 Template['header'].helpers({
   'name': function() {
-    return Router.current().route.getName();
+    return Session.get('page_name') || 'productions';
   }
 });
 
@@ -13,7 +13,7 @@ Template['header'].events({
     $('#nav-icon3').toggleClass('open');
     return false;
   },
-  'click a': function (event) {
+  'click #body-nav a': function (event) {
     $('body').toggleClass('show-nav');
      $('#nav-icon3').toggleClass('open');
   }
