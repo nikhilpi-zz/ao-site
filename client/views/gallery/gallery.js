@@ -6,7 +6,7 @@ Template['gallery'].helpers({
 
   'img': function(id) {
     var img = Session.get(id);
-    return img.source;
+    return img.source || '';
   }
 });
 
@@ -15,17 +15,21 @@ Template['gallery'].events({
 
 Template['gallery'].onRendered(function () {
   Meteor.call('getFB', Meteor.App.FBPAGE+'/albums', function(error, albums) {
-    Session.set('next',albums.paging.cursors.next);
     var filter_albums = [];
+    var img_ids = [];
     _.each(albums.data,function(album){
       Session.set(album.id, album)
       if (album.name !== 'Timeline Photos' && album.name !== 'Profile Pictures' && album.name !== 'Cover Photos' && album.name !== 'Mobile Uploads'){
         filter_albums.push(album);
-        Meteor.call('getFB',album.cover_photo, function(error, img) {
-            Session.set(album.cover_photo, img)
-        });
+        img_ids.push(album.cover_photo);
       }
     });
-    Session.set('albums', filter_albums)
+    Session.set('albums', filter_albums);
+
+    Meteor.call('getFBBatch',img_ids, function(error, imgs) {
+      _.each(imgs,function(img){
+        Session.set(img.id, img)
+      });
+    });
   });
 });

@@ -35,3 +35,9 @@ Template.registerHelper('equal', function(a,b){
 Template.registerHelper('formatDate', function(a){
   return moment(a).format('MM/DD/YYYY');
 });
+
+Template.registerHelper('addIndex', function (all) {
+  return _.map(all, function(val, index) {
+    return {index: index, value: val};
+  });
+});

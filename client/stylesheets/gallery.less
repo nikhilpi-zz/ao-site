@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'lib/elements';
+
+.gallery-carousel {
+  .item {
+    min-height: 525px;
+    width: 100%;
+    background-color: @cyan;
+    img {
+      width: auto;
+      margin: auto;
+      height: 525px;
+    }
+  }
+}
+
+.album_container {
+  padding: 20px;
+  .img-container {
+    background-color: @yellow;
+    width: 100%;
+    margin-top: 15px;
+    height: 150px;
+    overflow: hidden;
+    img {
+      height: intial;
+      width: 100%;
+      margin: auto;
+      .vertical-align();
+    }
+  }
+}
+
+@media (max-width: @phoneWidth) {
+  .gallery-carousel {
+    .owl-next, .owl-prev {
+      visibility: hidden;
+    }
+    .item {
+      height: 400px;
+      width: 100%;
+      background-color: @cyan;
+      img {
+        width: 100%;
+        margin: auto;
+        max-height: 400px;
+        height: auto;
+        vertical-align: middle;
+        .vertical-align();
+      }
+
+    }
+  }
+}

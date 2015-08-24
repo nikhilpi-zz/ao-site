@@ -35,7 +35,7 @@
 <template name="tweet_block">
   <div class="social_block tweet">
     <figure>
-      <h2>{{text}}</h2>
+      <h3>{{text}}</h3>
       <figcaption>
         <h3>@aoproductions</h3>
         <span>{{formatDate created_time}}</span>
@@ -61,7 +61,7 @@
   {{#if equal type "link"}}
       <div class="social_block fb">
         <figure class="text">
-          <h2>{{message}}</h2>
+          <h3>{{message}}</h3>
           <figcaption>
             <h3>{{caption}}</h3>
             <span>{{formatDate created_time}}</span>
@@ -73,7 +73,7 @@
   {{#if equal type "status"}}
       <div class="social_block fb">
         <figure class="text">
-          <h2>{{message}}</h2>
+          <h3>{{message}}</h3>
           <figcaption>
             <h3>{{likes.data.length}} likes</h3>
             <span>{{formatDate created_time}}</span>
@@ -85,7 +85,7 @@
   {{#if equal type "event"}}
     <div class="social_block fb">
       <figure class="text event">
-        <h2>{{name}}:<br>{{message}}</h2>
+        <h3>{{name}}:<br>{{message}}</h3>
         <figcaption>
           <h3>{{likes.data.length}} likes</h3>
           <span>{{formatDate created_time}}</span>

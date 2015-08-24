@@ -160,3 +160,10 @@
   -webkit-background-clip: @argument;
   background-clip: @argument;
 }
+.vertical-align(@x:50%) {
+  position: relative;
+  top: @x;
+  -webkit-transform: translateY(-@x);
+  -ms-transform: translateY(-@x);
+  transform: translateY(-@x);
+}

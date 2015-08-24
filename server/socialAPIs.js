@@ -1,4 +1,5 @@
 var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+var fb_get_batch = Meteor.wrapAsync(FBGraph.batch,FBGraph);
 var insta_feed = Meteor.wrapAsync(ig.user_media_recent,ig);
 var twit_get = Meteor.wrapAsync(Twit.get,Twit);
 
@@ -16,8 +17,24 @@ Meteor.methods({
         return pics;
     },
     getFB: function(query){
-        var upcoming_events = fb_get(query);
-        return upcoming_events;
+        var results = fb_get(query);
+        return results;
+    },
+    getFBBatch: function(query){
+        query = query.map(function(query) {
+            return {
+                method: 'GET',
+                relative_url: query
+            };
+        })
+
+        var results = fb_get_batch(query);
+
+        results = results.map(function(res) {
+            return JSON.parse(res.body);
+        })
+
+        return results;
     },
     getSocialStream: function() {
         var posts = fb_get(Meteor.App.FBPAGE+'/posts').data;

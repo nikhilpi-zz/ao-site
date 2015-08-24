@@ -1,10 +1,19 @@
 <template name="album">
-  <div class="container-fluid">
-    <h1>{{album.name}}</h1>
+  <div id="content" class="container-fluid">
+    <section class="row">
+      <div class="owl-carousel gallery-carousel">
+      </div>
+    </section>
+  </div>
+  <div class="container album_container">
     <div class="row">
       {{#each album.photos}}
         <div class="col-md-3">
-            <img src="{{source}}" class="img-responsive">
+          <a href="{{link}}" target="_blank">
+            <div class="img-container">
+              <img src="{{source}}" class="img-responsive" >
+            </div>
+          </a>
         </div>
       {{/each}}
     </div>

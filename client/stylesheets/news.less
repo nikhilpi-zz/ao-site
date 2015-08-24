@@ -1,5 +1,6 @@
 @import 'helpers';
 @import 'variables';
+@import 'fonts';
 @import 'lib/elements';
 @import 'lib/square.import.less';
 
@@ -16,13 +17,14 @@
   color: white;
 
   figure {
-    img, h2, .cover_img {
+    img, h2,h3, .cover_img {
       z-index: 10;
       .transition-duration(0.4s);
       position: relative;
       max-height: 100%;
       overflow: hidden;
       margin: 0;
+
     }
     figcaption {
       position: absolute;
@@ -50,6 +52,8 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        min-height: 27px;
+        //.transition(0)
       }
 
       span {
@@ -69,13 +73,16 @@
       }
     }
     &:hover {
-      img,h2, .cover_img {
+      img,h2,h3, .cover_img {
         .transform(scale(0.4));
       }
 
       figcaption {
-        .transform(scale(1));;
+        .transform(scale(1));
         opacity: 1;
+        h3 {
+          .transform(scale(1));
+        }
       }
     }
   }
@@ -90,7 +97,7 @@
   &.tweet {
     figure {
       background-color: @cyan;
-      padding: 20px;
+      padding: 16px;
       margin: 0;
       height: 100%;
     }
@@ -107,7 +114,7 @@
       height: 100%;
       width: 100%;
       &.text{
-        padding: 20px;
+        padding: 16px;
       }
       .cover_img {
         background: @magenta no-repeat center;
