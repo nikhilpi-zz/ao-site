@@ -27,77 +27,89 @@
 
 <template name="insta_block">
   <div class="social_block insta">
-    <figure>
-      <img class="img-responsive overlay" src="{{this.images.standard_resolution.url}}">
-      <figcaption>
-        <h3>{{caption.text}}</h3>
-        <span>{{formatDate created_time}}</span>
-        <a href="{{link}}" target="_blank"><i class="fa fa-instagram"></i></a>
-      </figcaption>
-    </figure>
+    <a href="{{link}}" target="_blank">
+      <figure>
+        <img class="img-responsive overlay" src="{{this.images.standard_resolution.url}}">
+        <figcaption>
+          <h3>{{caption.text}}</h3>
+          <span>{{formatDate created_time}}</span>
+          <a href="{{link}}" target="_blank"><i class="fa fa-instagram"></i></a>
+        </figcaption>
+      </figure>
+    </a>
   </div>
 </template>
 
 <template name="tweet_block">
   <div class="social_block tweet">
-    <figure>
-      <h3>{{text}}</h3>
-      <figcaption>
-        <h3>@aoproductions</h3>
-        <span>{{formatDate created_time}}</span>
-        <a href="https://twitter.com/aoproductions" target="_blank"><i class="fa fa-twitter"></i></a>
-      </figcaption>
-    </figure>
+    <a href="https://twitter.com/aoproductions" target="_blank">
+      <figure>
+        <h3>{{text}}</h3>
+        <figcaption>
+          <h3>@aoproductions</h3>
+          <span>{{formatDate created_time}}</span>
+          <a href="https://twitter.com/aoproductions" target="_blank"><i class="fa fa-twitter"></i></a>
+        </figcaption>
+      </figure>
+    </a>
   </div>
 </template>
 
 <template name="fb_block">
   {{#if equal type "photo"}}
       <div class="social_block fb">
-        <figure>
-          <div data-fb-id="{{object_id}}" class="cover_img" style="background-image: url('{{fbImage object_id}}');"></div>
-          <figcaption>
-            <h3>{{message}}</h3>
-            <span>{{formatDate created_time}}</span>
-            <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
-          </figcaption>
-        </figure>
+        <a href="{{link}}" target="_blank">
+          <figure>
+            <div data-fb-id="{{object_id}}" class="cover_img" style="background-image: url('{{fbImage object_id}}');"></div>
+            <figcaption>
+              <h3>{{message}}</h3>
+              <span>{{formatDate created_time}}</span>
+              <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
+            </figcaption>
+          </figure>
+        </a>
       </div>
   {{/if}}
   {{#if equal type "link"}}
       <div class="social_block fb">
-        <figure class="text">
-          <h3>{{message}}</h3>
-          <figcaption>
-            <h3>{{caption}}</h3>
-            <span>{{formatDate created_time}}</span>
-            <a href="{{link}}" target="_blank"><i class="fa fa-external-link-square"></i></a>
-          </figcaption>
-        </figure>
+        <a href="{{link}}" target="_blank">
+          <figure class="text">
+            <h3>{{message}}</h3>
+            <figcaption>
+              <h3>{{caption}}</h3>
+              <span>{{formatDate created_time}}</span>
+              <a href="{{link}}" target="_blank"><i class="fa fa-external-link-square"></i></a>
+            </figcaption>
+          </figure>
+        </a>
       </div>
   {{/if}}
   {{#if equal type "status"}}
       <div class="social_block fb">
-        <figure class="text">
-          <h3>{{message}}</h3>
-          <figcaption>
-            <h3>{{likes.data.length}} likes</h3>
-            <span>{{formatDate created_time}}</span>
-            <a href="https://www.facebook.com/ao.productions.nu" target="_blank"><i class="fa fa-facebook"></i></a>
-          </figcaption>
-        </figure>
+        <a href="{{link}}" target="_blank">
+          <figure class="text">
+            <h3>{{message}}</h3>
+            <figcaption>
+              <h3>{{likes.data.length}} likes</h3>
+              <span>{{formatDate created_time}}</span>
+              <a href="https://www.facebook.com/{{id}}" target="_blank"><i class="fa fa-facebook"></i></a>
+            </figcaption>
+          </figure>
+        </a>
       </div>
   {{/if}}
   {{#if equal type "event"}}
     <div class="social_block fb">
-      <figure class="text event">
-        <h3>{{name}}:<br>{{message}}</h3>
-        <figcaption>
-          <h3>{{likes.data.length}} likes</h3>
-          <span>{{formatDate created_time}}</span>
-          <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
-        </figcaption>
-      </figure>
+      <a href="{{link}}" target="_blank">
+        <figure class="text event">
+          <h3>{{name}}:<br>{{message}}</h3>
+          <figcaption>
+            <h3>{{likes.data.length}} likes</h3>
+            <span>{{formatDate created_time}}</span>
+            <a href="{{link}}" target="_blank"><i class="fa fa-facebook"></i></a>
+          </figcaption>
+        </figure>
+      </a>
     </div>
   {{/if}}
 </template>

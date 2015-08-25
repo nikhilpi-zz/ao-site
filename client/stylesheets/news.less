@@ -16,6 +16,14 @@
   width: 100%;
   color: white;
 
+  a {
+    color: white;
+    &:hover, &:visited, &:active, &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
   figure {
     img, h2,h3, .cover_img {
       z-index: 10;
@@ -124,7 +132,7 @@
       }
 
       &:hover {
-        .cover_img, h2{
+        .cover_img, h3{
           color: white;
         }
       }

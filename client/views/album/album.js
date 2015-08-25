@@ -28,14 +28,15 @@ Template['album'].onRendered(function() {
   }
   
   var owl_options = {
-    autoPlay: true,
+    autoPlay: false,
+    pagination:false,
     autoplaySpeed : 200,
     items : 1,
-    nav: true,
-    dots: false,
-    navText: ['',''],
+    navigation: true,
+    navigationText: ['',''],
     loop: true,
-    autoHeight: false
+    autoHeight: false,
+    singleItem: true
   };
 
   $(".owl-carousel").owlCarousel(owl_options);
@@ -48,7 +49,6 @@ Template['album'].onRendered(function() {
     _.each(album.photos.reverse(), function(photo){
       owl.addItem('<div class="item"><img src="'+photo.source+'" alt="loading..."></div>');
     });
-    $('.owl-next,.owl-prev').removeClass('disabled');
   });
 
 });

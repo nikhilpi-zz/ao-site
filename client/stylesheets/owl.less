@@ -1,0 +1,62 @@
+@import 'helpers';
+@import 'variables';
+@import 'fonts';
+@import 'lib/elements';
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+  background-color: transparent;
+  top: 240px;
+
+  &.owl-prev{
+    left: 0;
+    transform: rotate(-90deg);
+
+    &:hover{
+      background-color: transparent;
+    }
+
+    &::before {
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+      content: '';
+      display: inline-block;
+      height: 3em;
+      left: 0.15em;
+      position: relative;
+      top: 5em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 3em;
+    }
+  }
+
+  &.owl-next{
+    right: 0;
+    transform: rotate(90deg);
+
+    &:hover{
+      background-color: transparent;
+    }
+
+    &::before {
+      border-style: solid;
+      border-width: 0.25em 0.25em 0 0;
+      content: '';
+      display: inline-block;
+      height: 3em;
+      left: 0.15em;
+      position: relative;
+      top: 5em;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 3em;
+    }
+  }
+}
+
+@media (max-width: @phoneWidth) {
+  .owl-theme .owl-controls .owl-buttons div {
+    display: none;
+  }
+}

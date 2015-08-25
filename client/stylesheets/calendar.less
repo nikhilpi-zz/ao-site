@@ -22,15 +22,41 @@
 .calendar {
   .event_block {
     height: 100%;
-    background-color: @magenta;
     padding: 10px;
     margin: 5px;
     overflow: hidden;
-    color: white;
-    a {
-      color: white;
-      &:hover {
+
+    &.grey {
+      background-color: @grey;
+      a {
         color: white;
+      }
+    }
+
+    &.magenta {
+      background-color: @magenta;
+      a {
+        color: white;
+      }
+    }
+
+    &.cyan {
+      background-color: @cyan;
+      a {
+        color: white;
+      }
+    }
+
+    &.yellow {
+      background-color: @yellow;
+      a {
+        color: @grey;
+      }
+    }
+    
+    a {
+      &:hover, &:visited, &:active, &:focus {
+        color: inherit;
         text-decoration: none;
       }
     }
