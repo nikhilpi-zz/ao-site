@@ -26,6 +26,10 @@ Template.registerHelper('constant', function (what) {
   return Meteor.App[what.toUpperCase()];
 });
 
+Template.registerHelper('turnOffSquare', function () {
+  return $(window).width() <= 768;
+});
+
 Template.registerHelper('_', _);
 
 Template.registerHelper('equal', function(a,b){

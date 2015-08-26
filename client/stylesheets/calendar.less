@@ -28,35 +28,35 @@
 
     &.grey {
       background-color: @grey;
-      a {
+      a, a:hover {
         color: white;
       }
     }
 
     &.magenta {
       background-color: @magenta;
-      a {
+      a, a:hover {
         color: white;
       }
     }
 
     &.cyan {
       background-color: @cyan;
-      a {
+      a, a:hover {
         color: white;
       }
     }
 
     &.yellow {
       background-color: @yellow;
-      a {
+      a, a:hover {
         color: @grey;
       }
     }
     
     a {
       &:hover, &:visited, &:active, &:focus {
-        color: inherit;
+      color: inherit;
         text-decoration: none;
       }
     }
@@ -78,11 +78,15 @@
       margin: 0;
       text-align: center;
       font-family: 'ao light oblique';
+      a, a:hover, a:visited, a:active, a:focus {
+        color: @grey;
+        text-decoration: none;
+      }
     }
   }
 }
 
-@media (max-width: @phoneWidth){
+@media (max-width: @tabletWidth){
   .h > div.calendar,
   .calendar {
     .month_block {

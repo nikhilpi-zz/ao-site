@@ -28,9 +28,9 @@ Template['album'].onRendered(function() {
   }
   
   var owl_options = {
-    autoPlay: false,
+    autoPlay: true,
     pagination:false,
-    autoplaySpeed : 200,
+    autoplaySpeed : 400,
     items : 1,
     navigation: true,
     navigationText: ['',''],

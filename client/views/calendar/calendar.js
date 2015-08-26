@@ -22,7 +22,7 @@ Template['calendar'].helpers({
 
 Template['calendar'].events({
   'click .calendar_buttons #upcoming': function() {
-    Meteor.call('getFB', Meteor.App.FBPAGE+'/events?since='+moment().unix(), function(err, data) {
+    Meteor.call('getFB', Meteor.App.FBPAGE+'/events', function(err, data) {
       Session.set('events',addMonths(data.data.reverse()));
       Session.set('calendar_class', 'grey');
       Session.set('selected_year', 'upcoming');
@@ -58,7 +58,7 @@ Template['calendar'].events({
 });
 
 Template['calendar'].onRendered(function(){
-  Meteor.call('getFB', Meteor.App.FBPAGE+'/events?since='+moment().unix(), function(err, data) {
+  Meteor.call('getFB', Meteor.App.FBPAGE+'/events', function(err, data) {
     Session.set('events',addMonths(data.data.reverse()));
   });
 });

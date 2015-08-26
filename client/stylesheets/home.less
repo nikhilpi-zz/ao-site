@@ -1,3 +1,148 @@
 @import 'variables';
 @import 'lib/elements';
 
+.ask {
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  a {
+    &:hover, &:visited, &:active, &:focus {
+    color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: 4em;
+    color: @grey;
+  }
+  h2 {
+    font-size: 2em;
+    color: white;
+  }
+}
+
+section.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.parallax-1 {
+  background-image: url("../images/hands.jpeg");
+}
+
+.mission {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  .text {
+    padding-top: 55px;
+  }
+}
+
+.home_cal {
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
+.banner-carousel {
+  .item {
+    height: 600px;
+
+    img {
+      width: 100%;
+    }
+
+    .caption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      color: white;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      &.top_left {
+        padding: 0 150px;
+        .text {
+          .vertical-align(20%)
+        }
+      }
+
+      &.bottom_right {
+        padding: 0 150px;
+        text-align: right;
+        .text {
+          .vertical-align(80%)
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @tabletWidth) {
+  .mission {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    .text {
+      padding-top: 0px;
+    }
+  }
+
+  .home_cal {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .month_block {
+    }
+  }
+
+  .banner-carousel {
+    .item {
+      height: inherit;
+
+      img {
+        width: 100%;
+      }
+
+      .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        color: white;
+
+        h1 {
+          font-size: 2em;
+        }
+
+        h3 {
+          font-size: 1em;
+        }
+
+        &.top_left {
+          padding: 0 10px;
+          .text {
+            .vertical-align(5%)
+          }
+        }
+
+        &.bottom_right {
+          padding: 0 10px;
+          text-align: right;
+          .text {
+            .vertical-align(80%)
+          }
+        }
+      }
+    }
+  }
+}
