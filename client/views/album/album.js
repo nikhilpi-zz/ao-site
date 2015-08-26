@@ -46,7 +46,7 @@ Template['album'].onRendered(function() {
     var album = Session.get(self.data.id);
     album.photos = photos.data;
     Session.set(self.data.id, album);
-    _.each(album.photos.reverse(), function(photo){
+    _.each(album.photos, function(photo){
       owl.addItem('<div class="item"><img src="'+photo.source+'" alt="loading..."></div>');
     });
   });
