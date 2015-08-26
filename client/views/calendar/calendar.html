@@ -2,15 +2,15 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
+        <h1>{{selected_year}}</h1>
+      </div>
+      <div class="col-md-6 text-right">
         <ul class="calendar_buttons top_margin">
           <li class="grey_label white_text"><a id="upcoming" class="white_text">upcoming</a></li>
           <li class="yellow_label grey_text"><a id="this_year_ago">{{years_ago }}</a></li>
           <li class="magenta_label"><a id="one_year_ago">{{years_ago 1}}</a></li>
           <li class="cyan_label"><a id="two_year_ago">{{years_ago 2}}</a></li>
         </ul>
-      </div>
-      <div class="col-md-6 text-right">
-        <h1>{{selected_year}}</h1>
       </div>
     </div>
     <div class="row calendar no-gutter">
