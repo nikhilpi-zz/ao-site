@@ -1,10 +1,10 @@
 <template name="contact">
-  <div class="container top_padding full_height">
-    <div class="row">
+  <div class="container top_padding">
+    <div class="row bottom_margin">
       <h1 class="text-center">Contact us:</h1>
       {{#each emails}}
         <section>
-          <div class="col-md-3 col-md-offset-2">
+          <div class="col-md-4 col-md-offset-2">
             <h1 class="{{#unless isPhone}}text-right{{/unless}}"><span class="{{color}}_label">{{name}}: </span></h1>
           </div>
           <div class="col-md-4">
