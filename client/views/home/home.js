@@ -18,7 +18,7 @@ Template.home.onRendered(function () {
   var owl_options = {
     autoPlay: true,
     pagination:false,
-    slideSpeed: 10000,
+    slideSpeed: 1000,
     paginationSpeed: 1000,
     rewindSpeed: 1000,
     items : 1,

@@ -11,55 +11,23 @@
         </p>
       </div>
     </div>
-    <section>
-      <div class="row">
-        <div class="col-md-2">
-          <h1 class="magenta_label no_margins top_margin">Exec Board:</h1>
+    {{#each board}}
+      <section>
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="{{label}} no_margins top_margin">{{name}}:</h1>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
+        <div class="row">
+          {{#each members}}
+            <div class="col-md-3 text-center bottom_margin">
+              <img src="/images/board/{{img}}" class="img-responsive img-circle">
+              <h4>{{name}}</h4>
+              <h6>{{position}}</h6>
+            </div>
+          {{/each}}
         </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="col-md-2">
-          <h1 class="cyan_label no_margins top_margin">Films Board:</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-        <div class="col-md-2 text-center">
-          <img src="/images/ao.svg" class="img-responsive">
-          <h4>Nikhil Pai</h4>
-        </div>
-      </div>
-    </section>
+      </section>
+    {{/each}}
   </div>
 </template>
