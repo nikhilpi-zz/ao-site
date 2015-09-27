@@ -1,21 +1,27 @@
 <template name="gallery">
   <div class="container">
     <div class="row">
-      {{#each albums}}
-        <div class="col-md-6">
-          <div class="album_preview">
-            <a href="{{pathFor route='gallery.album' data=this}}">
-              <figure>
-                <div data-fb-id="{{object_id}}" class="cover_img" style="background-image: url('{{img cover_photo}}');"></div>
-              </figure>
-              <figcaption>
-                <h3>{{name}}</h3>
-                <p>{{formatDate created_time}}</p>
-              </figcaption>
-            </a>
+      {{#if albums}}
+        {{#each albums}}
+          <div class="col-md-6">
+            <div class="album_preview">
+              <a href="{{pathFor route='gallery.album' data=this}}">
+                <figure>
+                  <div data-fb-id="{{object_id}}" class="cover_img" style="background-image: url('{{img cover_photo}}');"></div>
+                </figure>
+                <figcaption>
+                  <h3>{{name}}</h3>
+                  <p>{{formatDate created_time}}</p>
+                </figcaption>
+              </a>
+            </div>
           </div>
+        {{/each}}
+      {{else}}
+        <div class="col-md-12 text-center">
+          <img class="img-responsive spinner" src="/images/loading-logo-black.gif"/>
         </div>
-      {{/each}}
+      {{/if}}
     </div>
   </div>
 </template>

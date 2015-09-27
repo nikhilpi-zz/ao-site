@@ -7,15 +7,21 @@
   </div>
   <div class="container album_container">
     <div class="row">
-      {{#each album.photos}}
-        <div class="col-md-3">
-          <a href="{{link}}" target="_blank">
-            <div class="img-container">
-              <img src="{{source}}" class="img-responsive" >
-            </div>
-          </a>
+      {{#if album}}
+        {{#each album.photos}}
+          <div class="col-md-3">
+            <a href="{{link}}" target="_blank">
+              <div class="img-container">
+                <img src="{{source}}" class="img-responsive" >
+              </div>
+            </a>
+          </div>
+        {{/each}}
+      {{else}}
+        <div class="col-md-12 text-center">
+          <img class="img-responsive spinner" src="/images/loading-logo-black.gif"/>
         </div>
-      {{/each}}
+      {{/if}}
     </div>
   </div>
 </template>

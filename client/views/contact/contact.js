@@ -14,13 +14,43 @@ var contact_info = [
     email: 'questions@aoproductions.net'
   },
   {
+    name: 'Co-Chairs',
+    color: 'cyan',
+    email: 'chairman@aoproductions.net'
+  },
+  {
+    name: 'Community Engagement',
+    color: 'yellow',
+    email: 'communityengagement@aoproductions.net'
+  },
+  {
+    name: 'Concerts',
+    color: 'magenta',
+    email: 'concerts@aoproductions.net'
+  },
+  {
     name: 'Films',
     color: 'cyan',
     email: 'films@aoproductions.net'
   },
   {
-    name: 'Concerts',
+    name: 'Finance',
     color: 'yellow',
-    email: 'concerts@aoproductions.net'
-  }
+    email: 'finance@aoproductions.net'
+  },
+  {
+    name: 'Marketing and Media',
+    color: 'magenta',
+    email: 'marketing@aoproductions.net'
+  },
+  {
+    name: 'Speakers',
+    color: 'cyan',
+    email: 'speakers@aoproductions.net'
+  },
+  {
+    name: 'Productions',
+    color: 'yellow',
+    email: 'productions@aoproductions.net'
+  },
 ];
