@@ -3,9 +3,9 @@
     <div class="row bottom_margin">
       <h1 class="text-center">Contact us:</h1>
       {{#each emails}}
-        <section>
+        <section class="row">
           <div class="col-md-4 col-md-offset-2">
-            <h1 class="{{#unless isPhone}}text-right{{/unless}}"><span class="{{color}}_label">{{name}}: </span></h1>
+            <h1 class="{{#if isDesktop}}text-right{{/if}}"><span class="{{color}}_label">{{name}}: </span></h1>
           </div>
           <div class="col-md-4">
             {{#if isPhone}}
