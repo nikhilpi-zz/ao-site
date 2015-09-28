@@ -57,6 +57,7 @@ mystor:device-detection@0.2.0
 natestrauser:animate-css@3.2.6
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
+okgrow:analytics@0.3.0
 ordered-dict@1.0.3
 raix:handlebar-helpers@0.2.4
 random@1.0.3

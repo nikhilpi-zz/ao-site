@@ -1,6 +1,12 @@
 {
-    "orion-cli": {
-        "profile": "default",
-        "config": "private/orion-config.json"
+  "orion-cli": {
+      "profile": "default",
+      "config": "private/orion-config.json"
+  },
+  "public": {
+    "analyticsSettings": {
+      // Add your analytics tracking id's here
+      "Google Analytics" : {"trackingId": "UA-57887474-3"},
     }
+  }
 }
