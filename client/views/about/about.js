@@ -13,17 +13,17 @@ Template['about'].helpers({
           {
             name: 'Danny Brennan',
             position: 'Co-Chair',
-            img: 'f8.jpg'
+            img: 'DannyBrennan.jpg'
           },
           {
             name: 'Ben Shear',
             position: 'Concerts',
-            img: 'f1.jpg'
+            img: 'BenShear.jpg'
           },
           {
             name: 'Blake Fromkin',
             position: 'Films',
-            img: 'f2.jpg'
+            img: 'BlakeFromkin.jpg'
           },
           {
             name: 'Danny Carlon',
@@ -38,7 +38,7 @@ Template['about'].helpers({
           {
             name: 'Olly Goodman',
             position: 'Development',
-            img: 'f3.jpg'
+            img: 'OllyGoodman.png'
           },
           {
             name: 'Caroline Fearon',
@@ -48,7 +48,7 @@ Template['about'].helpers({
           {
             name: 'Caroline Kelly',
             position: 'Marketing & Media',
-            img: 'f4.jpg'
+            img: 'CarolineKelly.jpg'
           },
           {
             name: 'Virginia Van Keuren',
@@ -58,17 +58,17 @@ Template['about'].helpers({
           {
             name: 'Max Goldberg',
             position: 'Productions',
-            img: 'f5.jpg'
+            img: 'MaxGoldberg.jpg'
           },
           {
             name: 'Eytan Boclin',
             position: 'Speakers',
-            img: 'f6.png'
+            img: 'EytanBoclin.jpg'
           },
           {
             name: 'Lauren Hutton-Work',
             position: 'Community Engagement',
-            img: 'f7.jpg'
+            img: 'LaurenHutton-Work.jpg'
           }
         ]
       }
