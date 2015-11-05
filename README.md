@@ -1,177 +1,65 @@
-# meteor-boilerplate
+# [A&O Productions Website](http://www.aoproductions.net/)
 
-This boilerplate is here to give you a starting point for your meteor projects, with a console tool to ease up some tasks. Essential atmosphere packages are included to give you features like routing and collection schemas out-of-the-box.  
+This is the website for A&O Productions at Northwestern University. A&O Productions is the student-run programming board of Northwestern University, with a schedule of concerts, speakers, and films that provides over 40 annual events of entertainment programming to the student body. 
 
-<!-- toc -->
+## Design:
 
-* [Installing with orion-cli](#installing-with-orion-cli)
-* [How to use](#how-to-use)
-  * [Generating files](#generating-files)
-  * [Removing default code](#removing-default-code)
-  * [Available profiles (cofeescript and es6)](#available-profiles-cofeescript-and-es6)
-  * [Deployments](#deployments)
-  * [SEO and other concerns](#seo-and-other-concerns)
-  * [Adding allow rules for external URLs](#adding-allow-rules-for-external-urls)
-* [Structure](#structure)
-  * [Packages used](#packages-used)
-  * [Folder structure](#folder-structure)
-* [Other Awesome Boilerplates](#other-awesome-boilerplates)
-* [License](#license)
+This site has 6 sections: home page, calendar, gallery, news, about and contact. Each section is either hard coded or the content is loaded over social media APIs. The goal of the site was to require as little maintenance as possible and streamline the content creation process. Rather than posting content to multiple channels, the site aggregates all of A&O's social media accounts and uses the information to fill the site. The calendar and gallery is loaded through Facebook and the newsfeed pulls from Facebook, Instagram and Twitter. 
 
-<!-- toc stop -->
+## Technologies:
 
-The boilerplate looks like following: [boilerplate.meteor.com](http://boilerplate.meteor.com). Have a look at [starthacking](http://starthacking.meteor.com/) for a project created with this boilerplate.
+* Meteor.js
+* Owl Carousel
+* FBGraph
+* Twitter Bootstrap
+* moment.js
+* Fontawesome
+* less
+* underscore
+* jQuery
 
-## Installing with orion-cli
+## Setup:
 
-```bash
-npm install -g orion-cli
+Create a setting.json file with the following information:
+```
+{
+    "orion-cli": {
+        "profile": "default",
+        "config": "private/orion-config.json"
+    },
+    "public": {
+        "analyticsSettings": {
+            "Google Analytics" : {"trackingId": YOUR-ID}
+        }
+    },
+    "private": {
+        "fb": "FB-TOKEN",
+        "twit": {
+            "consumer_key": "YOUR-KEY",
+            "consumer_secret": "YOUR-SECRET",
+            "access_token": "YOUR-TOKEN",
+            "access_token_secret": "YOUR-TOKEN-SECRET"
+        },
+        "ig": {
+            "client_id": "YOUR-ID",
+            "client_secret": "YOUR-SECRET"
+        }
+    }
+}
 ```
 
-This will install the [orion-cli](https://github.com/matteodem/orion-cli) tool, which can be used for scaffolding files with different profiles.
-You can still clone the repository, which doesn't give you the profile and scaffolding support.
+## Running
 
-## How to use
+`$ meteor --settings settings.json`
+Navigate to [localhost:3000](http://localhost:3000/) on your browser
 
-```sh
-# Assuming meteor is already installed
-orion create appName
-cd appName && meteor
-```
+## Challenges:
 
-### Generating files
+This site is a single page webapp, however all content is loaded asynchronously over APIs. The pages load quickly, but the APIs can sometimes be slow or fail. It was important to handle cases where content is not returned or takes longer than the page load time. 
 
-With orion-cli you can scaffold files based on your configuration that you've got.
+## To do:
 
-```sh
-orion generate routes
-```
-
-You can create models, views, change profiles and reset the project with the console tool (see below).
-
-
-### Removing default code
-
-There's already a lot of predefined code in this boilerplate, to show you the possible functionality. However, if you want to start off with an
-empty project use the provided command to get rid off all the code you don't need.
-
-```sh
-orion reset
-```
-
-### Available profiles (coffeescript and es6)
-
-* default (Plain Vanilla Javascript)
-* coffee (coffeescript, Unfancy JavaScript)
-* es6 (traceur, Traceur is a JavaScript.next-to-JavaScript-of-today compiler)
-
-You can change your profile like that
-```sh
-orion set-profile
-```
-
-There will be a prompt, where you can enter __coffee__ or any other profile that you have specified. Also use the ```reset``` command to start off with blank files according to your profile.
-
-### Deployments
-
-It is highly recommended to use [Meteor Up](https://github.com/arunoda/meteor-up) for easy deployments. 
-Have a look at the repository for more information.
-
-### SEO and other concerns
-
-> Meteor cannot do SEO 
-
-This statement is only partially true, since there is a package called [ms-seo](https://github.com/DerMambo/ms-seo), which
-has a lot of neat little tricks to help web crawlers notice your app the way you want them to. This boilerplate also adds constants under
-__client/lib/constants.js__ for the app. Change SEO settings inside the routes like that.
-
-```javascript
-Router.route('/about', function () {
-  this.render('about');
-  // Using the app constants
-  SEO.set({ title: 'About -' + Meteor.App.NAME, og: {...} });
-});
-```
-
-### Adding allow rules for external URLs
-
-The [browser-policy](https://atmospherejs.com/meteor/browser-policy) adds rules to deny all operations from external URLs.
-This helps dealing with clickjacking and other XSS methods used to attack the client. To whitelist a url, add following to 
-__server/config/security.js__
-
-```javascript
-BrowserPolicy.content.allowOriginForAll(YOUR_URL);
-```
-
-Other security enforcing packages like [audit-argument-checks](https://docs.meteor.com/#/full/auditargumentchecks) and 
-[matteodem:easy-security](https://github.com/matteodem/meteor-easy-security) have also been added.
-
-## Structure
-
-### Packages used
-
-* Meteor Core
-  * meteor-platform
-* Routing
-  * [iron:router](https://github.com/EventedMind/iron-router)
-  * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
-* Collections
-  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
-  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
-* Accounts
-  * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
-  * [useraccounts:semantic-ui](https://github.com/meteor-useraccounts/semantic-ui)
-* UI and UX
-  * [fastclick](https://github.com/meteor/meteor/tree/devel/packages/fastclick)
-  * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
-  * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css/)
-  * [semantic:ui](https://github.com/Semantic-Org/Semantic-UI-Meteor/)
-* Security
-  * [browser-policy](https://github.com/meteor/meteor/tree/devel/packages/browser-policy)
-  * [audit-argument-checks](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks)
-  * [matteodem:easy-security](https://github.com/matteodem/meteor-easy-security)
-* SEO
-  * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
-* Development
-  * [less](https://github.com/meteor/meteor/tree/devel/packages/less)
-  * [jquery](https://github.com/meteor/meteor/tree/devel/packages/jquery)
-  * [underscore](https://github.com/meteor/meteor/tree/devel/packages/underscore)
-  * [raix:handlebar-helpers](https://github.com/raix/Meteor-handlebar-helpers)
-
-The "insecure" and "autopublish" packages are removed by default (they make your app vulnerable).
-
-### Folder structure
-
-```
-client/ 				# Client folder
-    compatibility/      # Libraries which create a global variable
-    config/             # Configuration files (on the client)
-	lib/                # Library files that get executed first
-    startup/            # Javascript files on Meteor.startup()
-    stylesheets         # LESS files
-    modules/            # Meant for components, such as form and more(*)
-	views/			    # Contains all views(*)
-	    common/         # General purpose html templates
-model/  				# Model files, for each Meteor.Collection(*)
-private/                # Private files
-public/                 # Public files
-routes/                 # All routes(*)
-server/					# Server folder
-    fixtures/           # Meteor.Collection fixtures defined
-    lib/                # Server side library folder
-    publications/       # Collection publications(*)
-    startup/            # On server startup
-meteor-boilerplate		# Command line tool
-```
-
-(*) = the command line tool creates files in these folders
-
-## Other Awesome Boilerplates
-
-- [Void](https://github.com/SachaG/Void) by Sacha Greif
-- [meteor-jw-opinionated-skeleton](https://github.com/jamesdwilson/meteor-jw-opinionated-skeleton) by jamesdwilson (CoffeeScript)
-- [meteor-boilerplate](https://github.com/BeDifferential/meteor-boilerplate) by BeDifferential (CoffeeScript)
-- [em](https://github.com/EventedMind/em) by EventedMind (Boilerplate & Scaffolding)
-
-## License
-This boilerplate has an MIT License, see the LICENSE.txt for more information.
+[] Create event pages that wrap facebook content
+[] Easier way to load banners into the site
+[] Build custom poll for A&O's annual poll
+[] Easier way to load member pictures using facebook

@@ -8,7 +8,6 @@ Template['album'].helpers({
 
 Template['album'].events({
   'click .img-button': function(e) {
-    console.log(this)
     e.preventDefault();
     owl.goTo(this.index);
   }

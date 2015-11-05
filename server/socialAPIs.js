@@ -4,10 +4,6 @@ var insta_feed = Meteor.wrapAsync(ig.user_media_recent,ig);
 var twit_get = Meteor.wrapAsync(Twit.get,Twit);
 
 Meteor.methods({
-    getCal: function () {
-        var data = Meteor.http.call("GET", "https://www.googleapis.com/calendar/v3/calendars/ao.mmdesign%40gmail.com/events?key=AIzaSyDknbF9KqOCmWdnC0mTZKqRnUCJXKI6rdM");
-        return data;
-    },
     getTwit: function (id) {
         var tweets = twit_get('statuses/user_timeline', {user_id: id});
         return tweets;
@@ -70,7 +66,3 @@ Meteor.methods({
         return stream;
     }
 });
-
-// tweets created_at
-// insta created_time
-// posts created_time
