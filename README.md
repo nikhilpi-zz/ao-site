@@ -51,6 +51,7 @@ Create a setting.json file with the following information:
 ## Running
 
 `$ meteor --settings settings.json`
+
 Navigate to [localhost:3000](http://localhost:3000/) on your browser
 
 ## Challenges:
@@ -59,7 +60,7 @@ This site is a single page webapp, however all content is loaded asynchronously 
 
 ## To do:
 
-[] Create event pages that wrap facebook content
-[] Easier way to load banners into the site
-[] Build custom poll for A&O's annual poll
-[] Easier way to load member pictures using facebook
+- [ ] Create event pages that wrap facebook content
+- [ ] Easier way to load banners into the site
+- [ ] Build custom poll for A&O's annual poll
+- [ ] Easier way to load member pictures using facebook
