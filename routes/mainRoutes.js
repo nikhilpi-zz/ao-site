@@ -60,3 +60,12 @@ Router.route('/gallery/:id', {
     SEO.set({ title: 'Album - ' + Meteor.App.NAME });
   }
 });
+
+Router.route('/poll', {
+  name: 'poll',
+  action: function () {
+    this.render('poll');
+    Session.set('page_name','poll');
+    SEO.set({ title: 'Poll - ' + Meteor.App.NAME });
+  }
+});

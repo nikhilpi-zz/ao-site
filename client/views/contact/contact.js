@@ -16,7 +16,7 @@ var contact_info = [
   {
     name: 'Co-Chairs',
     color: 'cyan',
-    email: 'chairman@aoproductions.net'
+    email: 'carolinekelly2017@u.northwestern.edu'
   },
   {
     name: 'Community Engagement',

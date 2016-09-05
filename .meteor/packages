@@ -3,16 +3,15 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
-less
+less@2.7.5
 jquery
-underscore
-accounts-password
+underscore@1.0.9
+accounts-password@1.3.0
 aldeed:collection2
 iron:router
 raix:handlebar-helpers
 matteodem:easy-security
-fastclick
+fastclick@1.0.12
 zimme:iron-router-active
 manuelschoebel:ms-seo
 natestrauser:animate-css
@@ -27,3 +26,18 @@ timbroddin:instagram-node
 fortawesome:fontawesome
 mystor:device-detection
 okgrow:analytics
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+standard-minifier-css
+standard-minifier-js
+shell-server

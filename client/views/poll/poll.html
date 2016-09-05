@@ -1,5 +1,171 @@
 <template name="poll">
-  
+
+<!--  ALL JAVASCRIPT SHIT RIGHT HERE -->
+<script type = "text/javascript">
+var concertsShowing = false;
+function showConcertsDescription() {
+    if (concertsShowing){
+    document.getElementById('popupC').style.display = 'none';
+    concertsShowing = false;
+  } else {
+      document.getElementById('popupC').style.display = 'block';
+      concertsShowing = true;
+  }
+}
+
+var production = document.getElementById('PRODUCTION');
+var productionShowing = false;
+function showProdDescription(){
+    if (productionShowing){
+    document.getElementById('popupP').style.display = 'none';
+    productionShowing = false;
+  } else {
+      document.getElementById('popupP').style.display = 'block';
+      productionShowing = true;
+  }
+}
+
+var marketingandmedia = document.getElementById('MM');
+var mmshowing = false;
+function showMMDescription() {
+    if (mmshowing){
+    document.getElementById('popupMM').style.display = 'none';
+    mmshowing = false;
+  } else {
+      document.getElementById('popupMM').style.display = 'block';
+      mmshowing = true;
+  }
+}
+
+var speakers = document.getElementById('SPEAKERS');
+var speakersShowing = false;
+function showSpeakersDescription() {
+    if (speakersShowing){
+    document.getElementById('popupS').style.display = 'none';
+    speakersShowing = false;
+  } else {
+      document.getElementById('popupS').style.display = 'block';
+      speakersShowing = true;
+  }
+}
+
+var finance = document.getElementById('FINANCE');
+var financeShowing = false;
+function showFinanceDescription() {
+    if (financeShowing){
+    document.getElementById('popupF').style.display = 'none';
+    financeShowing = false;
+  } else {
+      document.getElementById('popupF').style.display = 'block';
+      financeShowing = true;
+  }
+}
+
+var dev = document.getElementById('DEV');
+var devShowing = false;
+function showDevDescription() {
+    if (devShowing){
+    document.getElementById('popupD').style.display = 'none';
+    devShowing = false;
+  } else {
+      document.getElementById('popupD').style.display = 'block';
+      devShowing = true;
+  }
+}
+
+var filmsShowing = false;
+function showFilmsDescription() {
+    if (filmsShowing){
+    document.getElementById('popupFILMS').style.display = 'none';
+    filmsShowing = false;
+  } else {
+      document.getElementById('popupFILMS').style.display = 'block';
+      filmsShowing = true;
+  }
+}
+
+var stShowing = false;
+function showStreetTeamDescription() {
+    if (stShowing){
+    document.getElementById('popupST').style.display = 'none';
+    stShowing = false;
+  } else {
+      document.getElementById('popupST').style.display = 'block';
+      stShowing = true;
+  }
+}
+</script>
+<!-- OK JAVASCRIPT IS OVER NOW -->
+
+    <div class = "row">
+        <div class="col-md-12">
+            <h1>SO YOU WANNA BE IN A&O?!</h1>
+            <h4>Click on any of the committee names to get a description of the committee, and a link to that committee's application!<br>You can apply to up to four committees, just make sure you fill out an application for each one!</h4>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-6 committees">
+            <a href = "#" onclick="showConcertsDescription()">CONCERTS</a>
+                <div id="popupC" style="display: none">
+                    <p>Description about Concerts!</p>
+                </div>
+
+            <div id = "PRODUCTION">
+            <a href = "#" onclick="showProdDescription()">PRODUCTION</a>
+                <div id="popupP" style="display: none">
+                    <p>Description about Production!</p>
+                </div>
+            </div>
+
+            <div id = "MM">
+            <a href = "#" onclick="showMMDescription()">MARKETING & MEDIA</a>
+                <div id="popupMM" style="display: none">
+                    <p>Description about M&M!</p>
+                </div>
+            </div>
+
+<div id = "SPEAKERS">
+            <a href = "#" onclick="showSpeakersDescription()">SPEAKERS</a>
+                <div id="popupS" style="display: none">
+                    <p>Description about Speakers!</p>
+                </div>
+            </div>
+        </div>
+
+<!-- SECOND COLUMN OF COMMITTEES -->
+
+        <div class = "col-md-6 committees">
+            <div id = "FINANCE">
+            <a href = "#" onclick="showFinanceDescription()">FINANCE</a>
+                <div id="popupF" style="display: none">
+                    <p>Description about Finance!</p>
+                </div>
+            </div>
+
+<div id = "DEV">
+            <a href = "#" onclick="showDevDescription()">DEVELOPMENT</a>
+                <div id="popupD" style="display: none">
+                    <p>Description about Development!</p>
+                </div>
+            </div>
+
+<div id = "FILMS">
+            <a href = "#" onclick="showFilmsDescription()">FILMS</a>
+                <div id="popupFILMS" style="display: none">
+                    <p>Description about Films!</p>
+                </div>
+            </div>
+
+<div id = "STREETTEAM">
+            <a href = "#" onclick="showStreetTeamDescription()">STREET TEAM</a>
+                <div id="popupST" style="display: none">
+                    <p>Description about Street Team!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </template>
 
 
