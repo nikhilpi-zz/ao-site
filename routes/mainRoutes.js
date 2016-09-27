@@ -61,11 +61,62 @@ Router.route('/gallery/:id', {
   }
 });
 
-Router.route('/poll', {
-  name: 'poll',
+Router.route('/application', {
+  name: 'application',
   action: function () {
-    this.render('poll');
-    Session.set('page_name','poll');
+    this.render('application');
+    Session.set('page_name','application');
+    SEO.set({ title: 'Applications - ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/films', {
+  name: 'Films',
+  action: function () {
+    this.render('films');
+    Session.set('page_name','Films Application');
+    SEO.set({ title: 'Films Application- ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/finance', {
+  name: 'Finance',
+  action: function () {
+    this.render('finance');
+    Session.set('page_name','Finance Application');
+    SEO.set({ title: 'Finance Application- ' + Meteor.App.NAME });
+  }
+});
+Router.route('/productions', {
+  name: 'Productions',
+  action: function () {
+    this.render('productions');
+    Session.set('page_name','Productions Application');
+    SEO.set({ title: 'Productions Application- ' + Meteor.App.NAME });
+  }
+});
+Router.route('/development', {
+  name: 'development',
+  action: function () {
+    this.render('development');
+    Session.set('page_name','Development Application');
+    SEO.set({ title: 'Development Application- ' + Meteor.App.NAME });
+  }
+});
+Router.route('/speakers', {
+  name: 'Speakers',
+  action: function () {
+    this.render('speakers');
+    Session.set('page_name','Speakers Application');
+    SEO.set({ title: 'Speakers Application- ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/concerts', {
+  name: 'concerts',
+  action: function () {
+    this.render('concerts');
+    Session.set('page_name','concerts');
     SEO.set({ title: 'Poll - ' + Meteor.App.NAME });
   }
 });
