@@ -2,198 +2,467 @@
 
 <!--  ALL JAVASCRIPT SHIT RIGHT HERE -->
 <script type = "text/javascript">
-var concertsShowing = false;
-function showConcertsDescription() {
-    if (concertsShowing){
-    document.getElementById('popupC').style.display = 'none';
-    concertsShowing = false;
-  } else {
-      document.getElementById('popupC').style.display = 'block';
-      concertsShowing = true;
-  }
-}
+// var concertsShowing = false;
+// function showConcertsDescription() {
+//     if (concertsShowing){
+//     document.getElementById('popupC').style.display = 'none';
+//     concertsShowing = false;
+//   } else {
+//       document.getElementById('popupC').style.display = 'block';
+//       concertsShowing = true;
+//   }
+// }
+//
+// var production = document.getElementById('PRODUCTION');
+// var productionShowing = false;
+// function showProdDescription(){
+//     if (productionShowing){
+//     document.getElementById('popupP').style.display = 'none';
+//     productionShowing = false;
+//   } else {
+//       document.getElementById('popupP').style.display = 'block';
+//       productionShowing = true;
+//   }
+// }
+//
+// var marketingandmedia = document.getElementById('MM');
+// var mmshowing = false;
+// function showMMDescription() {
+//     if (mmshowing){
+//     document.getElementById('popupMM').style.display = 'none';
+//     mmshowing = false;
+//   } else {
+//       document.getElementById('popupMM').style.display = 'block';
+//       mmshowing = true;
+//   }
+// }
+//
+// var speakers = document.getElementById('SPEAKERS');
+// var speakersShowing = false;
+// function showSpeakersDescription() {
+//     if (speakersShowing){
+//     document.getElementById('popupS').style.display = 'none';
+//     speakersShowing = false;
+//   } else {
+//       document.getElementById('popupS').style.display = 'block';
+//       speakersShowing = true;
+//   }
+// }
+//
+// var finance = document.getElementById('FINANCE');
+// var financeShowing = false;
+// function showFinanceDescription() {
+//     if (financeShowing){
+//     document.getElementById('popupF').style.display = 'none';
+//     financeShowing = false;
+//   } else {
+//       document.getElementById('popupF').style.display = 'block';
+//       financeShowing = true;
+//   }
+// }
+//
+// var dev = document.getElementById('DEV');
+// var devShowing = false;
+// function showDevDescription() {
+//     if (devShowing){
+//     document.getElementById('popupD').style.display = 'none';
+//     devShowing = false;
+//   } else {
+//       document.getElementById('popupD').style.display = 'block';
+//       devShowing = true;
+//   }
+// }
+//
+// var filmsShowing = false;
+// function showFilmsDescription() {
+//     if (filmsShowing){
+//     document.getElementById('popupFILMS').style.display = 'none';
+//     filmsShowing = false;
+//   } else {
+//       document.getElementById('popupFILMS').style.display = 'block';
+//       filmsShowing = true;
+//   }
+// }
 
-var production = document.getElementById('PRODUCTION');
-var productionShowing = false;
-function showProdDescription(){
-    if (productionShowing){
-    document.getElementById('popupP').style.display = 'none';
-    productionShowing = false;
-  } else {
-      document.getElementById('popupP').style.display = 'block';
-      productionShowing = true;
-  }
-}
+// var stShowing = false;
+// function showStreetTeamDescription() {
+//     if (stShowing){
+//     document.getElementById('popupST').style.display = 'none';
+//     document.getElementById('popupST').style.transition = "all 1s";
+//     document.getElementById('popupST').style.height = "0";
+//     stShowing = false;
+//   } else {
+//       // document.getElementById('popupST').style.display = 'block';
+//       document.getElementById('popupST').slideDown();
+//       stShowing = true;
+//   }
+// }
 
-var marketingandmedia = document.getElementById('MM');
-var mmshowing = false;
-function showMMDescription() {
-    if (mmshowing){
-    document.getElementById('popupMM').style.display = 'none';
-    mmshowing = false;
-  } else {
-      document.getElementById('popupMM').style.display = 'block';
-      mmshowing = true;
-  }
-}
+$( "#streetteam" ).click(function() {
+  $('#popupST').slideToggle();
+});
 
-var speakers = document.getElementById('SPEAKERS');
-var speakersShowing = false;
-function showSpeakersDescription() {
-    if (speakersShowing){
-    document.getElementById('popupS').style.display = 'none';
-    speakersShowing = false;
-  } else {
-      document.getElementById('popupS').style.display = 'block';
-      speakersShowing = true;
-  }
-}
+$( "#concerts" ).click(function() {
+  $('#popupC').slideToggle();
+});
 
-var finance = document.getElementById('FINANCE');
-var financeShowing = false;
-function showFinanceDescription() {
-    if (financeShowing){
-    document.getElementById('popupF').style.display = 'none';
-    financeShowing = false;
-  } else {
-      document.getElementById('popupF').style.display = 'block';
-      financeShowing = true;
-  }
-}
+$( "#productions" ).click(function() {
+  $('#popupP').slideToggle();
+});
 
-var dev = document.getElementById('DEV');
-var devShowing = false;
-function showDevDescription() {
-    if (devShowing){
-    document.getElementById('popupD').style.display = 'none';
-    devShowing = false;
-  } else {
-      document.getElementById('popupD').style.display = 'block';
-      devShowing = true;
-  }
-}
+$( "#MM" ).click(function() {
+  $('#popupMM').slideToggle();
+});
 
-var filmsShowing = false;
-function showFilmsDescription() {
-    if (filmsShowing){
-    document.getElementById('popupFILMS').style.display = 'none';
-    filmsShowing = false;
-  } else {
-      document.getElementById('popupFILMS').style.display = 'block';
-      filmsShowing = true;
-  }
-}
+$( "#finance" ).click(function() {
+  $('#popupF').slideToggle();
+});
 
-var stShowing = false;
-function showStreetTeamDescription() {
-    if (stShowing){
-    document.getElementById('popupST').style.display = 'none';
-    stShowing = false;
-  } else {
-      document.getElementById('popupST').style.display = 'block';
-      stShowing = true;
-  }
-}
+$( "#films" ).click(function() {
+  $('#popupFILMS').slideToggle();
+});
+
+$( "#speakers" ).click(function() {
+  $('#popupS').slideToggle();
+});
+
+$( "#development" ).click(function() {
+  $('#popupD').slideToggle();
+});
+
 </script>
 <!-- OK JAVASCRIPT IS OVER NOW -->
 
 <style>
-    p {
-      width: 75%;
-      font-size: 120%;
-      margin-left: 12.5%;
+    a:hover{
+      text-decoration: none;
+      color: white;
+    }
+    body{
+      font-family: "ao light";
+      font-size: 12pt;
     }
 
-    a {
-      font-size: 150%;
-    
+    h4{
+      font-family: "ao light";
     }
+    .row{
+      padding: 0 2em;
+    }
+
+    table{
+      border: 1px solid lightGray;
+    }
+    tr:nth-child(odd){
+     background: lightGray  !important;
+     color: black;
+    }
+    td{
+      padding:2px;
+    }
+    .img-btn-container {
+      width: 98%;
+      /*max-width: 1000px;*/
+      margin: 50px auto;
+    }
+
+    .col-2 {
+      position: relative;
+      width: 50%;
+      float: left;
+    }
+    @media(max-width: 768px) {
+      .col-2 {
+        width: 100%;
+      }
+    }
+    .image-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 300px;
+    }
+    .image-btn-wrapper:hover .image-btn-bg {
+      opacity: 0.6;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+
+    .line-bottom:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 5px;
+      bottom: 0;
+      left: 0;
+      background: #ff00ff;
+      z-index: 1;
+      -webkit-transform: scaleX(0) translateZ(0);
+              transform: scaleX(0) translateZ(0);
+      -webkit-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .line-bottom:hover:before {
+      -webkit-transform: scaleX(1) translateZ(0);
+              transform: scaleX(1) translateZ(0);
+    }
+
+    .image-btn-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .image-btn-bg.btn-1 {
+      background: url(http://dailynorthwestern.com/wp-content/uploads/2015/11/BROAD-CITY_CourtneyMorrison_WEB.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-2 {
+      background: url(http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2014/10/11/AO_Blowout-3_1.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-3 {
+      background: url(https://pbs.twimg.com/media/CP75Vp0U8AAbaky.jpg:large) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-4 {
+      background: url(http://pas-wordpress-media.s3.amazonaws.com/content/uploads/2014/09/watch-your-cash-flow-653x339.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-5 {
+      background: url(http://dailynorthwestern.com/wp-content/uploads/2014/10/SU-21-475x300.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-6 {
+      background: url(https://pmcvariety.files.wordpress.com/2016/05/american-honey-2.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-7 {
+      background: url(http://dailynorthwestern.com/wp-content/uploads/2014/05/PHILFEST_WITH_STORY_BrianLee.jpg) center/cover no-repeat;
+    }
+    .image-btn-bg.btn-8 {
+      background: url(http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2016/02/21/DSC_0011.jpg) center/cover no-repeat;
+    }
+
+    .link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: table;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .cell {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+     text-shadow: 2px 2px 10px #000000;
+    }
+    .cell * {
+      padding: 0;
+      margin: 0;
+    }
+    a:focus {
+    color: #00ffff;
+    text-decoration: none;
+    }
+    p{
+      margin: 10px;
+      text-align:left;
+    }
+    .row{
+      margin:0;
+    }
+
 </style>
 
     <div class = "row">
-        <div class="col-md-12">
-            <h1>SO YOU WANNA BE IN A&O?!</h1>
-            <h4>Click on any of the committee names to get a description of the committee, and a link to that committee's application!<br>You can apply to up to four committees, just make sure you fill out an application for each one!</h4>
+        <div class="col-md-8 col-md-offset-2">
+            <h1>SO YOU WANT TO BE IN A&O?</h1>
+            <h3>Interested in bringing quality concerts, films and speakers to Northwestern University?</h3>
+            <h4>Read the descriptions and decide which committees most interests you. You can apply to up to three committees, though you will only be able to serve on one per year. Don't worry – all committee members have ample opportunity to be involved with the many facets of A&O. Don't be concerned with your experience or academic interests either. With our hands-on approach to campus programming, A&O is a great place to learn new skills and to cater to different interests.<br><br>
+            Click on any of the committee names to see the description.</h4>
+            <h2>HOW TO APPLY</h2>
+            <table class="table">
+              <tr>
+                <td>1) Submit the "General Application" first.</td>
+              </tr>
+              <tr>
+                <td>2) Submit a completed application for EACH commitee you'd like to apply. Please indicate which committee is your first, second, and third choice. You may apply up to three. You do not have to fill out three applications if you are only interested in one.</td>
+                </tr>
+              </table>
+            <h2>DATES</h2>
+            <table class="table">
+              <tr>
+                <td>Elder Cider Night</td>
+                <td>Sunday, Oct 2</td>
+                 <td>Elder Residence Hall</td>
+                 <td>10PM</td>
+              </tr>
+              <tr>
+                <td>Infosession</td>
+                <td>Tuesday, Oct 4</td>
+                 <td>Harris Hall 107</td>
+                 <td>7PM</td>
+                </tr>
+              <tr>
+                <td>Applications Due</td>
+                <td>Friday, Oct 7</td>
+                 <td>Online</td>
+                 <td>Midnight</td>
+               </tr>
+            </table>
         </div>
     </div>
-    <div class = "row">
-        <div class = "col-md-6 committees">
-            <a href = "#" onclick="showConcertsDescription()">CONCERTS</a>
-                <div id="popupC" style="display: none">
-                    <p>
-A&O produces concerts for the entire Northwestern community, so it is extremely important that Concerts members listen to a wide range of music and keep their ears to the ground for up-and-coming artists. Members not only help select artists, but are also responsible for negotiating with agents, sending offers, and handling contracts. Professionalism is key, as members work directly with industry professionals. However, in turn, members will gain real industry experience through A&O.<br>
-Concerts is typically the smallest on A&O, and so members are expected to be enthusiastic and willing to actively participate in discussion. Being a member of this committee requires a lot of hard work, and members must be extraordinarily dedicated, but ultimately they are grati ed to see hundreds of students uni ed in excitement for the artists whom they bring.</p>
-                </div>
+    <div class = "row" style="padding:0">
+      <div class="img-btn-container">
 
-            <div id = "PRODUCTION">
-            <a href = "#" onclick="showProdDescription()">PRODUCTION</a>
-                <div id="popupP" style="display: none">
-                    <p>Once an A&O event is booked, the Production committee plans and executes all of the logistics
-to make the show a reality. Among many other
-tasks, producers are responsible for sub-contracting staging, lighting, sound, and transportation, as well as organizing A&O members into a production team. In addition, producers work directly with artist management to attend to the production requirements of the artists and their crew. We also work closely with several other committees and the Northwestern administration to ensure that all shows run smoothly.</p>
-                </div>
-            </div>
+  <div class="col-2">
 
-            <div id = "MM">
-            <a href = "#" onclick="showMMDescription()">MARKETING & MEDIA</a>
-                <div id="popupMM" style="display: none">
-                    <p>M&M uses many tools to connect A&O with the student body. Have you ever seen a  yer with
-the A&O logo on it? A poster, shirt, or Facebook event? That’s us, the marketing team that  lls you
-in and pumps you up for A&O events. (In fact, if you’re reading this right now, this app was also designed by M&M.) We manage everything from the big-picture marketing strategies; to the design of promotional materials; to the of cial A&O website.</p>
-                </div>
-            </div>
-
-<div id = "SPEAKERS">
-            <a href = "#" onclick="showSpeakersDescription()">SPEAKERS</a>
-                <div id="popupS" style="display: none">
-                    <p>The Speakers committee is responsible for booking comedy acts, dynamic speakers, and unique special events. In the past, celebrities like Aziz Ansari, James Franco, BJ Novak, Kenan Thompson, John Oliver, Tracy Morgan, Bo Burnham, Jerry Seinfeld, and Michael Moore have entertained students.
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-1">
+      </div>
+      <a id="speakers" class="link" href="#">
+        <div class="cell">
+          <h3>SPEAKERS</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupS" style="display: none">
+        <p>The Speakers committee is responsible for booking comedy acts, dynamic speakers, and unique special events. In the past, celebrities like Aziz Ansari, James Franco, BJ Novak, Kenan Thompson, John Oliver, Tracy Morgan, Bo Burnham, Jerry Seinfeld, and Michael Moore have entertained students.
 As a committee member, you become responsible
 for booking and facilitating each event. Members speak with agents, negotiate contracts, and learn
 the ins and out of the world of professional comedy. Creativity, organization, professionalism, and
 people skills enable members to execute events that make the campus laugh and think throughout the year. Speakers committee members must be deeply interested in the comedy world and passionate about bringing the best possible speakers to Northwestern’s campus.</p>
-                </div>
-            </div>
+    </div>
+
+  </div>
+  <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-2">
+      </div>
+      <a id="concerts" class="link" href="#">
+        <div class="cell">
+          <h3>CONCERTS</h3>
         </div>
+      </a>
+    </div>
+    <div id="popupC" style="display: none">
+        <p>
+A&O produces concerts for the entire Northwestern community, so it is extremely important that Concerts members listen to a wide range of music and keep their ears to the ground for up-and-coming artists. Members not only help select artists, but are also responsible for negotiating with agents, sending offers, and handling contracts. Professionalism is key, as members work directly with industry professionals. However, in turn, members will gain real industry experience through A&O.<br>
+Concerts is typically the smallest on A&O, and so members are expected to be enthusiastic and willing to actively participate in discussion. Being a member of this committee requires a lot of hard work, and members must be extraordinarily dedicated, but ultimately they are grati ed to see hundreds of students uni ed in excitement for the artists whom they bring.</p>
+    </div>
 
-<!-- SECOND COLUMN OF COMMITTEES -->
+  </div>
+    <div class="col-2">
 
-        <div class = "col-md-6 committees">
-            <div id = "FINANCE">
-            <a href = "#" onclick="showFinanceDescription()">FINANCE</a>
-                <div id="popupF" style="display: none">
-                    <p>The Finance committee develops, manages, and audits budgets for all A&O events to ensure that all transactions are within university guidelines. Account managers will process accounts payable, handle ticket revenue, and perform post-budget analysis.<br>
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-3">
+      </div>
+      <a id="MM" class="link" href="#">
+        <div class="cell">
+          <h3>MEDIA AND MARKETING</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupMM" style="display: none">
+        <p>M&M uses many tools to connect A&O with the student body. Have you ever seen a flyer with
+the A&O logo on it? A poster, shirt, or Facebook event? That’s us, the marketing team that fills you
+in and pumps you up for A&O events. (In fact, if you’re reading this right now, this app was also designed by M&M.) We manage everything from the big-picture marketing strategies; to the design of promotional materials; to the of social A&O website. We're looking for marketers, designers, and coders.</p>
+    </div>
+
+  </div>
+    <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-4">
+      </div>
+      <a id="finance" class="link" href="#">
+        <div class="cell">
+          <h3>FINANCE</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupF" style="display: none">
+        <p>The Finance committee develops, manages, and audits budgets for all A&O events to ensure that all transactions are within university guidelines. Account managers will process accounts payable, handle ticket revenue, and perform post-budget analysis.<br>
 Finance also acts as the liaison between A&O and the organization’s debtors and creditors. We spend a considerable amount of time creating funding proposals and bringing in new business. Every  scal year, the Finance committee supervises transactions totaling several hundred thousand dollars.</p>
-                </div>
-            </div>
+    </div>
 
-<div id = "DEV">
-            <a href = "#" onclick="showDevDescription()">DEVELOPMENT</a>
-                <div id="popupD" style="display: none">
-                    <p>Simply put, Development works toward making A&O
+  </div>
+
+  <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-5">
+      </div>
+      <a id="productions" class="link" href="#">
+        <div class="cell">
+          <h3>PRODUCTIONS</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupP" style="display: none">
+        <p>Once an A&O event is booked, the Production committee plans and executes all of the logistics
+to make the show a reality. Among many other
+tasks, producers are responsible for sub-contracting staging, lighting, sound, and transportation, as well as organizing A&O members into a production team. In addition, producers work directly with artist management to attend to the production requirements of the artists and their crew. We also work closely with several other committees and the Northwestern administration to ensure that all shows run smoothly.</p>
+    </div>
+
+  </div>
+  <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-6">
+      </div>
+      <a id="films" class="link" href="#">
+        <div class="cell">
+          <h3>FILMS</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupFILMS" style="display: none">
+        <p>
+Stay tuned for our regularly scheduled programming, because Films is A&O’s most consistent and pro table committee. Films is responsible for screening recently released  lms almost every other week, with a lineup ranging all the way from mega- blockbusters to small independent  lms. We also co-sponsor screenings with other student groups and host free pre-screenings of movies before they are released in theaters. For 34 years, A&O Films has produced B-Fest, our annual 24-hour B-movie festival in the winter quarter, which attracts crowds from all over the world. Finally, we have added an annual speaker series event where we bring a prominent member of the  lm industry to campus for a screening and Q&A.</p>
+    </div>
+
+  </div>
+    <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-7">
+      </div>
+      <a id="development" class="link" href="#">
+        <div class="cell">
+          <h3>DEVELOPMENT</h3>
+        </div>
+      </a>
+    </div>
+    <div id="popupD" style="display: none">
+        <p>Simply put, Development works toward making A&O
 the best student group to be a part of. The committee’s responsibilities range from Internal Relations to External Relations to Alumni Relations. Our goal is not only to craft a cohesive A&O board, but to make A&O events more enjoyable for the whole student body. Members of the Development committee will collaborate to plan all-board social events, work alongside the chairmen on guiding the Street Team, and manage all A&O co-sponsorships with other student groups. We work closely with members of Concerts, Speakers, and Films to develop new ideas to improve and develop A&O’s programming. Whether
 it be spearheading a huge co-sponsorship to bring Ava Duvernay for a Q&A and a screening of Selma, or planning an all-board karaoke night, the Development committee is responsible for how A&O interacts with its own members, its alumni, and other student groups.</p>
-                </div>
-            </div>
-
-<div id = "FILMS">
-            <a href = "#" onclick="showFilmsDescription()">FILMS</a>
-                <div id="popupFILMS" style="display: none">
-                    <p>
-Stay tuned for our regularly scheduled programming, because Films is A&O’s most consistent and pro table committee. Films is responsible for screening recently released  lms almost every other week, with a lineup ranging all the way from mega- blockbusters to small independent  lms. We also co-sponsor screenings with other student groups and host free pre-screenings of movies before they are released in theaters. For 34 years, A&O Films has produced B-Fest, our annual 24-hour B-movie festival in the winter quarter, which attracts crowds from all over the world. Finally, we have added an annual speaker series event where we bring a prominent member of the  lm industry to campus for a screening and Q&A.</p>
-                </div>
-            </div>
-
-<div id = "STREETTEAM">
-            <a href = "#" onclick="showStreetTeamDescription()">STREET TEAM</a>
-                <div id="popupST" style="display: none">
-                    <p>Are you a freshman? Not quite sure what committee you’d be best suited for? No worries! The “Street Team” is a group of freshmen on A&O who spend
-a year learning about A&O culture, shows, and people--all while getting the opportunity to work, produce, and collaborate with the existing seven committees. In short, while Street Teamers are not formally members of one of the seven committees, they are mentored by the A&O co-chairs as their own unique committee. Most current A&O board and exec members started on this team!</p>
-                </div>
-            </div>
-        </div>
     </div>
+
+  </div>
+    <div class="col-2">
+
+    <div class="image-btn-wrapper line-bottom">
+      <div class="image-btn-bg btn-8">
+      </div>
+      <a id="streetteam" onclick="showStreetTeamDescription()" class="link" href="#">
+        <div class="cell">
+          <h3>STREET TEAM</h3>
+          <h4>Freshmen only</h4>
+        </div>
+      </a>
+    </div>
+    <div id="popupST" style="display: none">
+        <p>Are you a freshman? Not quite sure what committee you’d be best suited for? No worries! The “Street Team” is a group of freshmen on A&O who spend
+a year learning about A&O culture, shows, and people--all while getting the opportunity to work, produce, and collaborate with the existing seven committees. In short, while Street Teamers are not formally members of one of the seven committees, they are mentored by the A&O co-chairs as their own unique committee. Most current A&O board and exec members started on this team!</p>
+    </div>
+  </div>
+
+</div>
+</div>
 
 
 </template>
-
-
