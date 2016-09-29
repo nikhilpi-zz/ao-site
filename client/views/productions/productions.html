@@ -1,26 +1,48 @@
 <template name = "productions">
-	
-	<h1><br> PRODUCTIONS APPLICATION 2K16 </h1>
 
-	<style>
-		.submissionfield {
-    		width: 75%; 
-    		height: 200px; 
-    		border: 6px solid #999999; 
-    		padding: 5px;
-		}
-
-		h1 {
-			font-size: 345%;
-		}
-
-		h3 {
+<style>
+	.submissionfield {
 			width: 75%;
-			margin-left: 12.5%;
-		}
+			height: 200px;
+			border: 2px solid #999999;
+			padding: 5px;
+	}
 
-	</style>
+	h1 {
+		font-size: 345%;
+	}
 
+	h3 {
+		width: 75%;
+		margin-left: 12.5%;
+	}
+
+	#lefty {
+		background-color: black;
+		height: 2612px;
+		z-index: 99999;
+	}
+
+	#appTitle {
+		position: fixed;
+		margin-left: 5%;
+		font-weight: lighter;
+		color: white;
+	}
+
+	#questions {
+		float: right;
+	}
+
+	.indivQuestion {
+		font-weight: lighter;;
+	}
+
+</style>
+
+<div class = "row">
+	<div id = "questions" class = "col-md-12">
+		<h1><br> PRODUCTIONS APPLICATION 2K16 </h1>
 
 	<form action="https://formspree.io/dgl@u.northwestern.edu"
       method="POST">
@@ -49,10 +71,11 @@
       <input class = "submissionfield" placeholder = "WHAT IS IT?" type="text" name="Productions Question 8">
 
     <BR><BR><BR>
-    
+
 
     <input type="submit" value="SUBMIT THIS SHIT">
 </form>
+</div></div>
 
 
 </template>
