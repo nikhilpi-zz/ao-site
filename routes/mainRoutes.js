@@ -111,6 +111,14 @@ Router.route('/speakers', {
     SEO.set({ title: 'Speakers Application- ' + Meteor.App.NAME });
   }
 });
+Router.route('/general', {
+  name: 'general',
+  action: function () {
+    this.render('general');
+    Session.set('page_name','General Application');
+    SEO.set({ title: 'General Application- ' + Meteor.App.NAME });
+  }
+});
 
 Router.route('/concerts', {
   name: 'concerts',
@@ -118,5 +126,13 @@ Router.route('/concerts', {
     this.render('concerts');
     Session.set('page_name','concerts');
     SEO.set({ title: 'Poll - ' + Meteor.App.NAME });
+  }
+});
+Router.route('/mnm', {
+  name: 'mnm',
+  action: function () {
+    this.render('mandm');
+    Session.set('page_name','Marketing and Media');
+    SEO.set({ title: 'Marketing and Media - ' + Meteor.App.NAME });
   }
 });
