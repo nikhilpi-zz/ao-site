@@ -2,101 +2,6 @@
 
 <!--  ALL JAVASCRIPT SHIT RIGHT HERE -->
 <script type = "text/javascript">
-// var concertsShowing = false;
-// function showConcertsDescription() {
-//     if (concertsShowing){
-//     document.getElementById('popupC').style.display = 'none';
-//     concertsShowing = false;
-//   } else {
-//       document.getElementById('popupC').style.display = 'block';
-//       concertsShowing = true;
-//   }
-// }
-//
-// var production = document.getElementById('PRODUCTION');
-// var productionShowing = false;
-// function showProdDescription(){
-//     if (productionShowing){
-//     document.getElementById('popupP').style.display = 'none';
-//     productionShowing = false;
-//   } else {
-//       document.getElementById('popupP').style.display = 'block';
-//       productionShowing = true;
-//   }
-// }
-//
-// var marketingandmedia = document.getElementById('MM');
-// var mmshowing = false;
-// function showMMDescription() {
-//     if (mmshowing){
-//     document.getElementById('popupMM').style.display = 'none';
-//     mmshowing = false;
-//   } else {
-//       document.getElementById('popupMM').style.display = 'block';
-//       mmshowing = true;
-//   }
-// }
-//
-// var speakers = document.getElementById('SPEAKERS');
-// var speakersShowing = false;
-// function showSpeakersDescription() {
-//     if (speakersShowing){
-//     document.getElementById('popupS').style.display = 'none';
-//     speakersShowing = false;
-//   } else {
-//       document.getElementById('popupS').style.display = 'block';
-//       speakersShowing = true;
-//   }
-// }
-//
-// var finance = document.getElementById('FINANCE');
-// var financeShowing = false;
-// function showFinanceDescription() {
-//     if (financeShowing){
-//     document.getElementById('popupF').style.display = 'none';
-//     financeShowing = false;
-//   } else {
-//       document.getElementById('popupF').style.display = 'block';
-//       financeShowing = true;
-//   }
-// }
-//
-// var dev = document.getElementById('DEV');
-// var devShowing = false;
-// function showDevDescription() {
-//     if (devShowing){
-//     document.getElementById('popupD').style.display = 'none';
-//     devShowing = false;
-//   } else {
-//       document.getElementById('popupD').style.display = 'block';
-//       devShowing = true;
-//   }
-// }
-//
-// var filmsShowing = false;
-// function showFilmsDescription() {
-//     if (filmsShowing){
-//     document.getElementById('popupFILMS').style.display = 'none';
-//     filmsShowing = false;
-//   } else {
-//       document.getElementById('popupFILMS').style.display = 'block';
-//       filmsShowing = true;
-//   }
-// }
-
-// var stShowing = false;
-// function showStreetTeamDescription() {
-//     if (stShowing){
-//     document.getElementById('popupST').style.display = 'none';
-//     document.getElementById('popupST').style.transition = "all 1s";
-//     document.getElementById('popupST').style.height = "0";
-//     stShowing = false;
-//   } else {
-//       // document.getElementById('popupST').style.display = 'block';
-//       document.getElementById('popupST').slideDown();
-//       stShowing = true;
-//   }
-// }
 
 $( "#streetteam" ).click(function() {
   $('#popupST').slideToggle();
@@ -374,6 +279,18 @@ $( "#development" ).click(function() {
                  <td>Online</td>
                  <td>Midnight</td>
                </tr>
+               <tr>
+                 <td>Interviews</td>
+                 <td>Oct. 14 – 16</td>
+                  <td>On Campus</td>
+                  <td>All Day</td>
+                </tr>
+                <tr>
+                  <td>First All Board</td>
+                  <td>Monday, Nov. 7</td>
+                   <td>Location TBD</td>
+                   <td>Time TBD</td>
+                 </tr>
             </table>
             <button onclick="window.location.href='{{pathFor route='general'}}'" id="button">READY? APPLY TO A&O</button>
             <!-- <a id="general" href="{{pathFor route='general'}}">READY? APPLY TO A&O</a> -->
@@ -483,7 +400,7 @@ Finance also acts as the liaison between A&O and the organization’s debtors an
         <p>Once an A&O event is booked, the Production committee plans and executes all of the logistics
 to make the show a reality. Among many other
 tasks, producers are responsible for sub-contracting staging, lighting, sound, and transportation, as well as organizing A&O members into a production team. In addition, producers work directly with artist management to attend to the production requirements of the artists and their crew. We also work closely with several other committees and the Northwestern administration to ensure that all shows run smoothly.</p>
-<button onclick="window.location.href='{{pathFor route='productions'}}'" id="button">PRODUCTIONS APPLICATION</button>
+<button onclick="window.location.href='/productions'" id="button">PRODUCTIONS APPLICATION</button>
 <br>
 <!-- <a id="general" href="{{pathFor route='production'}}">READY? APPLY TO PRODUCTIONS</a> -->
 </div>
