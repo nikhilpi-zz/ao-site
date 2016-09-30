@@ -287,7 +287,55 @@ $( "#development" ).click(function() {
       background-color: #cc00cc;
 
     }
-
+    button {
+		  outline: none;
+		  height: 40px;
+		  text-align: center;
+		  width: 230px;
+		  border-radius: 40px;
+		  background: #fff;
+		  border: 2px solid #ff00ff;
+		  color: #ff00ff;
+		  letter-spacing: 1px;
+		  text-shadow: 0;
+		  font-size: 12px;
+		  font-weight: bold;
+		  cursor: pointer;
+		  -webkit-transition: all 0.25s ease;
+		  transition: all 0.25s ease;
+      margin: 10px;
+		}
+		button:hover {
+		  color: white;
+		  background: #ff00ff;
+		}
+		button:active {
+		  letter-spacing: 2px;
+		}
+		#committeebutton{
+			border: 2px solid #00ffff;
+			color: #00ffff;
+		}
+		#committeebutton:hover{
+			color: white;
+			background: #00ffff;
+		}
+		.onclic {
+		  width: 40px;
+		  border-color: #bbbbbb;
+		  border-width: 3px;
+		  font-size: 0;
+		  border-left-color: #ff00ff;
+		  -webkit-animation: rotating 2s 0.25s linear infinite;
+		          animation: rotating 2s 0.25s linear infinite;
+		}
+		.onclic:after {
+		  content: "";
+		}
+		.onclic:hover {
+		  color: #ff00ff;
+		  background: white;
+		}
 
 </style>
 
@@ -327,7 +375,8 @@ $( "#development" ).click(function() {
                  <td>Midnight</td>
                </tr>
             </table>
-            <a id="general" href="{{pathFor route='general'}}">READY? APPLY TO A&O</a>
+            <button onclick="window.location.href='{{pathFor route='general'}}'" id="button">READY? APPLY TO A&O</button>
+            <!-- <a id="general" href="{{pathFor route='general'}}">READY? APPLY TO A&O</a> -->
         </div>
     </div>
     <div class = "row" style="padding:0">
@@ -350,7 +399,9 @@ As a committee member, you become responsible
 for booking and facilitating each event. Members speak with agents, negotiate contracts, and learn
 the ins and out of the world of professional comedy. Creativity, organization, professionalism, and
 people skills enable members to execute events that make the campus laugh and think throughout the year. Speakers committee members must be deeply interested in the comedy world and passionate about bringing the best possible speakers to Northwestern’s campus.</p>
-<a id="general" href="{{pathFor route='speakers'}}">READY? APPLY TO SPEAKERS</a>
+  <button onclick="window.location.href='/speakers'" id="button">SPEAKERS APPLICATION</button>
+  <br>
+<!-- <a id="general" href="{{pathFor route='speakers'}}">READY? APPLY TO SPEAKERS</a> -->
 </div>
 
   </div>
@@ -369,7 +420,9 @@ people skills enable members to execute events that make the campus laugh and th
         <p>
 A&O produces concerts for the entire Northwestern community, so it is extremely important that Concerts members listen to a wide range of music and keep their ears to the ground for up-and-coming artists. Members not only help select artists, but are also responsible for negotiating with agents, sending offers, and handling contracts. Professionalism is key, as members work directly with industry professionals. However, in turn, members will gain real industry experience through A&O.<br>
 Concerts is typically the smallest on A&O, and so members are expected to be enthusiastic and willing to actively participate in discussion. Being a member of this committee requires a lot of hard work, and members must be extraordinarily dedicated, but ultimately they are grati ed to see hundreds of students uni ed in excitement for the artists whom they bring.</p>
-<a id="general" href="{{pathFor route='concerts'}}">READY? APPLY TO CONCERTS</a>
+<button onclick="window.location.href='{{pathFor route='concerts'}}'" id="button">CONCERTS APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='concerts'}}">READY? APPLY TO CONCERTS</a> -->
 </div>
 
   </div>
@@ -388,7 +441,9 @@ Concerts is typically the smallest on A&O, and so members are expected to be ent
         <p>M&M uses many tools to connect A&O with the student body. Have you ever seen a flyer with
 the A&O logo on it? A poster, shirt, or Facebook event? That’s us, the marketing team that fills you
 in and pumps you up for A&O events. (In fact, if you’re reading this right now, this app was also designed by M&M.) We manage everything from the big-picture marketing strategies; to the design of promotional materials; to the of social A&O website. We're looking for marketers, designers, and coders.</p>
-<a id="general" href="{{pathFor route='mnm'}}">READY? APPLY TO M&M</a>
+<button onclick="window.location.href='{{pathFor route='mnm'}}'" id="button">M&M APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='mnm'}}">READY? APPLY TO M&M</a> -->
 </div>
 
   </div>
@@ -406,7 +461,9 @@ in and pumps you up for A&O events. (In fact, if you’re reading this right now
     <div id="popupF" style="display: none">
         <p>The Finance committee develops, manages, and audits budgets for all A&O events to ensure that all transactions are within university guidelines. Account managers will process accounts payable, handle ticket revenue, and perform post-budget analysis.<br>
 Finance also acts as the liaison between A&O and the organization’s debtors and creditors. We spend a considerable amount of time creating funding proposals and bringing in new business. Every  scal year, the Finance committee supervises transactions totaling several hundred thousand dollars.</p>
-<a id="general" href="{{pathFor route='finance'}}">READY? APPLY TO FINANCE</a>
+<button onclick="window.location.href='/finance'" id="button">FINANCE APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='finance'}}">READY? APPLY TO FINANCE</a> -->
 </div>
 
   </div>
@@ -426,7 +483,9 @@ Finance also acts as the liaison between A&O and the organization’s debtors an
         <p>Once an A&O event is booked, the Production committee plans and executes all of the logistics
 to make the show a reality. Among many other
 tasks, producers are responsible for sub-contracting staging, lighting, sound, and transportation, as well as organizing A&O members into a production team. In addition, producers work directly with artist management to attend to the production requirements of the artists and their crew. We also work closely with several other committees and the Northwestern administration to ensure that all shows run smoothly.</p>
-<a id="general" href="{{pathFor route='production'}}">READY? APPLY TO PRODUCTIONS</a>
+<button onclick="window.location.href='{{pathFor route='productions'}}'" id="button">PRODUCTIONS APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='production'}}">READY? APPLY TO PRODUCTIONS</a> -->
 </div>
 
   </div>
@@ -444,7 +503,9 @@ tasks, producers are responsible for sub-contracting staging, lighting, sound, a
     <div id="popupFILMS" style="display: none">
         <p>
 Stay tuned for our regularly scheduled programming, because Films is A&O’s most consistent and pro table committee. Films is responsible for screening recently released  lms almost every other week, with a lineup ranging all the way from mega- blockbusters to small independent  lms. We also co-sponsor screenings with other student groups and host free pre-screenings of movies before they are released in theaters. For 34 years, A&O Films has produced B-Fest, our annual 24-hour B-movie festival in the winter quarter, which attracts crowds from all over the world. Finally, we have added an annual speaker series event where we bring a prominent member of the  lm industry to campus for a screening and Q&A.</p>
-<a id="general" href="{{pathFor route='films'}}">READY? APPLY TO FILMS</a>
+<button onclick="window.location.href='/films'" id="button">FILMS APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='films'}}">READY? APPLY TO FILMS</a> -->
 </div>
 
   </div>
@@ -463,7 +524,9 @@ Stay tuned for our regularly scheduled programming, because Films is A&O’s mos
         <p>Simply put, Development works toward making A&O
 the best student group to be a part of. The committee’s responsibilities range from Internal Relations to External Relations to Alumni Relations. Our goal is not only to craft a cohesive A&O board, but to make A&O events more enjoyable for the whole student body. Members of the Development committee will collaborate to plan all-board social events, work alongside the chairmen on guiding the Street Team, and manage all A&O co-sponsorships with other student groups. We work closely with members of Concerts, Speakers, and Films to develop new ideas to improve and develop A&O’s programming. Whether
 it be spearheading a huge co-sponsorship to bring Ava Duvernay for a Q&A and a screening of Selma, or planning an all-board karaoke night, the Development committee is responsible for how A&O interacts with its own members, its alumni, and other student groups.</p>
-<a id="general" href="{{pathFor route='development'}}">READY? APPLY TO DEVELOPMENT</a>
+<button onclick="window.location.href='{{pathFor route='development'}}'" id="button">DEVELOPMENT APPLICATION</button>
+<br>
+<!-- <a id="general" href="{{pathFor route='development'}}">READY? APPLY TO DEVELOPMENT</a> -->
 </div>
 
   </div>

@@ -2,81 +2,225 @@
 
 
 	<style>
-		.submissionfield {
-    		width: 75%;
-    		height: 200px;
-    		border: 2px solid #999999;
-    		padding: 5px;
-		}
+	.submissionfield {
+		width: 75%;
+		border: 1px solid #999999;
+		padding: 5px;
+		text-align: left;
+		color: black;
+		font-family: "ao light";
+		letter-spacing: 1px;
+	}
+	.no_margins {
+		margin: 0 !important;
+		width: 100%;
+	}
 
-		h1 {
-			font-size: 345%;
-			font-weight: bolder;
-		}
+	h1 {
+		font-size: 345%;
+	}
 
-		h3 {
-			width: 75%;
-			margin-left: 12.5%;
-		}
+	h3 {
+		width: 75%;
+		margin-left: 12.5%;
+		font-family: "ao light";
+		font-size: 18px;
+		text-align: left;
+	}
 
-		#lefty {
-			background-color: black;
-			height: 2700px;
-			z-index: 99999;
-		}
+	#lefty {
+		background-color: black;
+		height: 2680px;
+		z-index: -10;
+		position: fixed
+	}
 
-		#appTitle {
-			position: fixed;
-			margin-left: 5%;
-			font-weight: lighter;
-			color: white;
-		}
+	#appTitle {
+		position: fixed;
+		margin: 30vh auto;
+		font-family: "ao light";
+		color: white;
+		letter-spacing: 7px;
+		font-size: 38px;
+		width: 33.33%
+	}
+	#appSubtitle{
+		position: fixed;
+		margin: 38vh auto;
+		font-family: "ao light";
+		color: white;
+		letter-spacing: 2px;
+		font-size: 16px;
+		width: 33.33%;
+	}
 
-		#questions {
-			float: right;
-		}
+	#questions {
+		float: right;
+	}
 
-		.indivQuestion {
-			font-weight: lighter;;
-		}
+	.indivQuestion {
+		font-weight: lighter;;
+	}
+	*:focus {
+	outline: none;
+	}
 
+	.shortQ {
+		height: 40px;
+		border: none;
+		border-bottom: grey solid 1px;
+		background-color: white !important;
+		color: black;
+		font-family: "ao light";
+		letter-spacing: 2px;
+	}
+	select {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+		width: 75%;
+		text-align: center;
+	}
 
+	::-webkit-input-placeholder {
+		 color: #ccc;
+	}
 
+	:-moz-placeholder { /* Firefox 18- */
+		 color: #ccc;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		 color: #ccc;
+	}
+
+	:-ms-input-placeholder {
+		 color: #ccc;
+	}
+
+	button {
+		outline: none;
+		height: 40px;
+		text-align: center;
+		width: 130px;
+		border-radius: 40px;
+		background: #fff;
+		border: 2px solid #ff00ff;
+		color: #ff00ff;
+		letter-spacing: 1px;
+		text-shadow: 0;
+		font-size: 12px;
+		font-weight: bold;
+		cursor: pointer;
+		-webkit-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+	}
+	button:hover {
+		color: white;
+		background: #ff00ff;
+	}
+	button:active {
+		letter-spacing: 2px;
+	}
+	#committeebutton{
+		border: 2px solid #00ffff;
+		color: #00ffff;
+	}
+	#committeebutton:hover{
+		color: white;
+		background: #00ffff;
+	}
+	.onclic {
+		width: 40px;
+		border-color: #bbbbbb;
+		border-width: 3px;
+		font-size: 0;
+		border-left-color: #ff00ff;
+		-webkit-animation: rotating 2s 0.25s linear infinite;
+						animation: rotating 2s 0.25s linear infinite;
+	}
+	.onclic:after {
+		content: "";
+	}
+	.onclic:hover {
+		color: #ff00ff;
+		background: white;
+	}
 	</style>
 
 
 <div class = "row">
-	<div id = "questions" class = "col-md-12">
-		<h1><br> CONCERTS APPLICATION 2K16 </h1>
+	<div id = "lefty" class = "col-md-4 hidden-xs">
+		<h1 id = "appTitle"> COMMITTEE Q'S </h1>
+		<p id="appSubtitle">The show is even better <br> when you book the band.</p>
+	</div>
+	<div id = "questions" class = "col-md-8">
+		<h1><br>CONCERT APPLICATION 2016 </h1>
 
 		<form action="https://formspree.io/dgl@u.northwestern.edu"
 	      method="POST">
-	      <h3 class="indivQuestion"> Why do you want to be a part of concerts?<br>What characteristics do you possess that would make you a perfect fit? </h3>
-	    <input class="submissionfield" placeholder = "WHY DO YOU WANNA BE A PART OF CONCERTS?" type="text" name="q1"><br>
+				<h3 class = "indivQuestion">What's your first and last name?</h3>
+        <input class = "submissionfield shortQ" placeholder = "HI. MY FULL NAME IS:" type="text" name="name"><br>
 
-	      <h3 class="indivQuestion"> Go to your iTunes or music program and sort by the most played songs.<br>Name the artists from the top three songs (Don’t cheat--we’re not judging the names.)<br>and discuss why you think they would be either a good or bad fit for Northwestern. </h3>
-	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q2"><br>
+        <h3 class = "indivQuestion">What is your school email address? </h3>
+        <input class = "submissionfield shortQ" placeholder = "EMAIL ADDRESS" type="text" name="email">
+				<br><small class="form-text text-muted">Why this info again? So the form has your name and email attached in case it gets unattached to your general questions.</small><br>
 
-	      <h3 class="indivQuestion"> Being on the Concerts committee is more than sitting in a meeting and talking about bands you like and want to bring to campus. We deal directly with professionals including agents, managers, and university of cials. Characterize your experience (if any) in dealing with adults in a professional environment, or, if you have not worked in this type of environment before, discuss how you feel about working with professionals in their line of work. </h3>
-	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q3"><br>
+				<div class="form-group">
+					<h3 class="indivQuestion">Why do you want to be a part of concerts?<br>What characteristics do you possess that would make you a perfect fit?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to two paragraphs." name="WhyConcerts"></textarea>
+				</div>
 
-	      <h3 class="indivQuestion"> How well do you think the concerts we’ve had in the past (Young The Giant, AlunaGeorge, T-Pain, Rae Sremmurd, Baauer, Grouplove, IconaPop, etc.) have catered to the tastes of the student body? What areas of music do you think are neglected (if any) based on previous shows and campus demand? How do you think we could do a better job of appeasing everyone and what would be your goals for the year if selected? If you’re a new student, just answer the last question. </h3>
-	    <input class="submissionfield" placeholder = "HOW HAVE WE BEEN DOING?" type="text" name="q4"><br>
+				<div class="form-group">
+					<h3 class="indivQuestion">Go to your iTunes or music program and sort by the most played songs.<br>Name the artists from the top three songs (Don’t cheat--we’re not judging the names.)<br>and discuss why you think they would be either a good or bad fit for Northwestern.</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please be specific." name="iTunesSong"></textarea>
+				</div>
 
-	      <h3 class="indivQuestion"> Which artists do you think are going to blow up in 2017? Why? </h3>
-	    <input class="submissionfield" placeholder = "WHO'S UP NEXT?" type="text" name="q5"><br>
+				<div class="form-group">
+					<h3 class="indivQuestion">Being on the Concerts committee is more than sitting in a meeting and talking about bands you like and want to bring to campus. We deal directly with professionals including agents, managers, and university of cials. Characterize your experience (if any) in dealing with adults in a professional environment, or, if you have not worked in this type of environment before, discuss how you feel about working with professionals in their line of work.</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please be specific." name="experience"></textarea>
+				</div>
 
-	      <h3 class="indivQuestion"> Where do you find new music? (i.e. blogs, friends, Spotify, the radio, etc.). </h3>
+				<div class="form-group">
+					<h3 class="indivQuestion">How well do you think the concerts we’ve had in the past (Young The Giant, AlunaGeorge, T-Pain, Rae Sremmurd, Baauer, Grouplove, IconaPop, etc.) have catered to the tastes of the student body? What areas of music do you think are neglected (if any) based on previous shows and campus demand? How do you think we could do a better job of appeasing everyone and what would be your goals for the year if selected? If you’re a new student, just answer the last question.</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please be specific." name="concertFeedback"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">Which artists do you think are going to blow up in 2017? Why?</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please be specific." name="prediction"></textarea>
+				</div>
+
+				<div class="form-group">
+					<h3 class="indivQuestion">What is your favorite Kanye West album? (Elaborate on your choice)</h3>
+					<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please be specific." name="Kanye"></textarea>
+				</div>
+	      <!-- <h3 class="indivQuestion"> Why do you want to be a part of concerts?<br>What characteristics do you possess that would make you a perfect fit? </h3>
+	    <input class="submissionfield" placeholder = "WHY DO YOU WANNA BE A PART OF CONCERTS?" type="text" name="q1"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Go to your iTunes or music program and sort by the most played songs.<br>Name the artists from the top three songs (Don’t cheat we’re not judging the names.)<br>and discuss why you think they would be either a good or bad fit for Northwestern. </h3>
+	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q2"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Being on the Concerts committee is more than sitting in a meeting and talking about bands you like and want to bring to campus. We deal directly with professionals including agents, managers, and university of cials. Characterize your experience (if any) in dealing with adults in a professional environment, or, if you have not worked in this type of environment before, discuss how you feel about working with professionals in their line of work. </h3>
+	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q3"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> How well do you think the concerts we’ve had in the past (Young The Giant, AlunaGeorge, T-Pain, Rae Sremmurd, Baauer, Grouplove, IconaPop, etc.) have catered to the tastes of the student body? What areas of music do you think are neglected (if any) based on previous shows and campus demand? How do you think we could do a better job of appeasing everyone and what would be your goals for the year if selected? If you’re a new student, just answer the last question. </h3>
+	    <input class="submissionfield" placeholder = "HOW HAVE WE BEEN DOING?" type="text" name="q4"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Which artists do you think are going to blow up in 2017? Why? </h3>
+	    <input class="submissionfield" placeholder = "WHO'S UP NEXT?" type="text" name="q5"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Where do you find new music? (i.e. blogs, friends, Spotify, the radio, etc.). </h3>
 	    <input class="submissionfield" placeholder = "WHERE DO YOU FIND NEW JAMS?" type="text" name="q6"><br>
 
 	      <h3 class="indivQuestion"> What is your favorite Kanye West album? (Elaborate on your choice) </h3>
-	    <input class="submissionfield" placeholder = "PLEASE DON'T SAY YOU DON'T HAVE ONE" type="text" name="q7">
-
-	    <BR><BR><BR>
-
-
-	    <input type="submit" value="SUBMIT THIS SHIT">
+	    <input class="submissionfield" placeholder = "PLEASE DON'T SAY YOU DON'T HAVE ONE" type="text" name="q7"> -->
+			<BR>
+	    <button id="button" type="submit" value="Submit">SUBMIT</button>
 	</form>
+			<hr>
+			<h4>Congrats. You've completed the Concerts Application! You shall hear back from us by October 16.</h4>
+			<br>
+				<button onclick="window.location.href='/application'" id="committeebutton">BACK TO QUESTIONS</button>
 	</div>
 </div>
 
