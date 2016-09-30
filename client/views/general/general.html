@@ -3,33 +3,55 @@
 
 	<style>
 		.submissionfield {
-    		width: 75%;
-    		height: 200px;
-    		border: 2px solid #999999;
-    		padding: 5px;
+  		width: 75%;
+  		border: 1px solid #999999;
+  		padding: 5px;
+			text-align: left;
+			color: black;
+			font-family: "ao light";
+			letter-spacing: 1px;
+		}
+		.no_margins {
+	    margin: 0 !important;
+	    width: 100%;
 		}
 
 		h1 {
 			font-size: 345%;
-			font-weight: bolder;
 		}
 
 		h3 {
 			width: 75%;
 			margin-left: 12.5%;
+			font-family: "ao light";
+			font-size: 16px;
+			text-align: left;
 		}
 
 		#lefty {
 			background-color: black;
 			height: 2680px;
-			z-index: 99999;
+			z-index: -10;
+			position: fixed
 		}
 
 		#appTitle {
 			position: fixed;
-			margin-left: 5%;
-			font-weight: lighter;
+			margin: 30vh auto;
+			font-family: "ao light";
 			color: white;
+			letter-spacing: 7px;
+			font-size: 38px;
+			width: 33.33%
+		}
+		#appSubtitle{
+			position: fixed;
+			margin: 38vh auto;
+			font-family: "ao light";
+			color: white;
+			letter-spacing: 2px;
+			font-size: 16px;
+			width: 33.33%;
 		}
 
 		#questions {
@@ -39,106 +61,206 @@
 		.indivQuestion {
 			font-weight: lighter;;
 		}
+		*:focus {
+    outline: none;
+		}
 
     .shortQ {
       height: 40px;
-      border: 0px;
-      background-color: gray;
-      color: white;
+			border: none;
+      border-bottom: grey solid 1px;
+      background-color: white !important;
+      color: black;
+			font-family: "ao light";
+			letter-spacing: 2px;
     }
+		select {
+			-webkit-appearance: none;
+			-webkit-border-radius: 0px;
+			width: 75%;
+			text-align: center;
+		}
 
-    select {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
-  width: 75%;
+		::-webkit-input-placeholder {
+		   color: #ccc;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   color: #ccc;
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   color: #ccc;
+		}
+
+		:-ms-input-placeholder {
+		   color: #ccc;
+		}
+
+		button {
+  outline: none;
+  height: 40px;
   text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+button:hover {
+  color: white;
+  background: #ff00ff;
+}
+button:active {
+  letter-spacing: 2px;
+}
+button:after {
+  content: "SUBMIT";
 }
 
-
-
+.onclic {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #ff00ff;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+  content: "";
+}
+.onclic:hover {
+  color: #ff00ff;
+  background: white;
+}
 	</style>
 
 
 <div class = "row">
-	<div id = "lefty" class = "col-md-4">
-		<h1 id = "appTitle"> <br><br> GENERAL <br> APPLICATION </h1>
+	<div id = "lefty" class = "col-md-4 hidden-xs">
+		<h1 id = "appTitle"> GENERAL Q'S </h1>
+		<p id="appSubtitle">Start an application by<br> answering these general questions.</p>
 	</div>
 	<div id = "questions" class = "col-md-8">
 		<h1><br> A&O GENERAL QUESTIONS </h1>
 
 		<form action="https://formspree.io/dgl@u.northwestern.edu"
 	      method="POST">
-        <h3 class = "indivQuestion" > Just so we can make sure we know whose application this is, what's your name? </h3>
-        <input class = "submissionfield shortQ" placeholder = "HI. MY NAME IS:" type="text" name="name"><br>
+        <h3 class = "indivQuestion" > Let's get things started. What's your first and last name? </h3>
+        <input class = "submissionfield shortQ" placeholder = "HI. MY FULL NAME IS:" type="text" name="name"><br>
 
         <h3 class = "indivQuestion" > What is your school email address? </h3>
-        <input class = "submissionfield shortQ" placeholder = "EMAIL ADDRESS" type="text" name="name"><br>
+        <input class = "submissionfield shortQ" placeholder = "EMAIL ADDRESS" type="text" name="email"><br><br>
 
         <h3 class = "indivQuestion" > What year are you? </h3>
         <select class = "shortQ" id = "yearBox" name = "year">
-          <option value = "senior"> 2017 &#9660; </option>
-          <option value = "junior"> 2018 &#9660;</option>
-          <option value = "sophomore"> 2019 &#9660;</option>
-          <option value = "freshman"> 2020 &#9660;</option>
-        </select><br>
+					<option> Please choose &#9660; </option>
+          <option value = "senior"> 2017</option>
+          <option value = "junior"> 2018</option>
+          <option value = "sophomore"> 2019</option>
+          <option value = "freshman"> 2020</option>
+        </select><br><br>
 
-        <h3 class = "indivQuestion" > Please rank your top 3 committee preferences </h3>
+        <h3 class = "indivQuestion" > Please rank your top 3 committee preferences. </h3>
         <select class = "shortQ" name = "Committe1">
-          <option value = "Concerts"> Concerts &#9660; </option>
-          <option value = "Development"> Development &#9660;</option>
-          <option value = "MM"> Marketing and Media &#9660;</option>
-          <option value = "Films"> Films &#9660;</option>
-          <option value = "Speakers"> Speakers &#9660;</option>
-          <option value = "Finance"> Finance &#9660;</option>
-          <option value = "Productions"> Productions &#9660;</option>
+					<option> Please choose &#9660; </option>
+          <option value = "Concerts"> Concerts </option>
+          <option value = "Development"> Development</option>
+          <option value = "MM"> Marketing and Media</option>
+          <option value = "Films"> Films</option>
+          <option value = "Speakers"> Speakers</option>
+          <option value = "Finance"> Finance </option>
+          <option value = "Productions"> Productions</option>
         </select><br>
 
         <select class = "shortQ" name = "Committe2">
-          <option value = "Concerts"> Concerts &#9660; </option>
-          <option value = "Development"> Development &#9660;</option>
-          <option value = "MM"> Marketing and Media &#9660;</option>
-          <option value = "Films"> Films &#9660;</option>
-          <option value = "Speakers"> Speakers &#9660;</option>
-          <option value = "Finance"> Finance &#9660;</option>
-          <option value = "Productions"> Productions &#9660;</option>
+					<option> Please choose &#9660; </option>
+          <option value = "Concerts"> Concerts </option>
+          <option value = "Development"> Development</option>
+          <option value = "MM"> Marketing and Media</option>
+          <option value = "Films"> Films</option>
+          <option value = "Speakers"> Speakers</option>
+          <option value = "Finance"> Finance </option>
+          <option value = "Productions"> Productions</option>
         </select><br>
 
         <select class = "shortQ" name = "Committe3">
-          <option value = "Concerts"> Concerts &#9660; </option>
-          <option value = "Development"> Development &#9660;</option>
-          <option value = "MM"> Marketing and Media &#9660;</option>
-          <option value = "Films"> Films &#9660;</option>
-          <option value = "Speakers"> Speakers &#9660;</option>
-          <option value = "Finance"> Finance &#9660;</option>
-          <option value = "Productions"> Productions &#9660;</option>
+					<option> Please choose &#9660; </option>
+          <option value = "Concerts"> Concerts </option>
+          <option value = "Development"> Development </option>
+          <option value = "MM"> Marketing and Media</option>
+          <option value = "Films"> Films</option>
+          <option value = "Speakers"> Speakers </option>
+          <option value = "Finance"> Finance </option>
+          <option value = "Productions"> Productions </option>
         </select><br><br><br>
 
-	      <h3 class="indivQuestion"> Why do you want to be a part of A&O?
- </h3>
-	    <input class="submissionfield" placeholder = "WHY DO YOU WANNA BE A PART OF CONCERTS?" type="text" name="q1"><br>
+			<div class="form-group">
+			  <h3 class="indivQuestion">Why do you want to be a part of A&O?</h3>
+			  <textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. You may elaborate on your committee choices." name="q1"></textarea>
+			</div>
 
-	      <h3 class="indivQuestion"> What time commitments do you have for the 2016-2017 academic year?  </h3>
-	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q2"><br>
+			<div class="form-group">
+				<h3 class="indivQuestion">What time commitments do you have for the 2016-2017 academic year?</h3>
+				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please explain your top three." name="q2"></textarea>
+			</div>
 
-	      <h3 class="indivQuestion"> What skills and experiences can you bring to A&O? </h3>
-	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q3"><br>
+			<div class="form-group">
+				<h3 class="indivQuestion">What skills and experiences can you bring to A&O?</h3>
+				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please be specific." name="q3"></textarea>
+			</div>
 
-	      <h3 class="indivQuestion"> Every year, board members have the opportunity to act as our official photographer, documenting shows and the work we do behind the scenes. If you are interested in applying for this position, please provide a portfolio of your work along with your application.
- </h3>
-	    <input class="submissionfield" placeholder = "HOW HAVE WE BEEN DOING?" type="text" name="q4"><br>
+			<div class="form-group">
+				<h3 class="indivQuestion">Every year, board members have the opportunity to act as our official photographer, documenting shows and the work we do behind the scenes. If you are interested in applying for this position, please provide a portfolio of your work along with your application.</h3>
+				<textarea class="submissionfield" rows="4" maxlength="500" placeholder="Please limit your answer to a paragraph. Please include a URL to your work, or your email so that we may request your portfolio via email." name="q4"></textarea>
+			</div>
 
-	      <h3 class="indivQuestion">  If you are a Freshman would you be interested in joining the Street Team? </h3>
-	    <input class="submissionfield" placeholder = "WHO'S UP NEXT?" type="text" name="q5"><br>
+			<h3 class="indivQuestion">If you are a Freshman would you be interested in joining the Street Team?</h3>
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="inlineCheckbox1" value="yes">Yes
+			</label>
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="inlineCheckbox2" value="no">No
+			</label>
 
-	      <h3 class="indivQuestion"> Where do you find new music? (i.e. blogs, friends, Spotify, the radio, etc.). </h3>
-	    <input class="submissionfield" placeholder = "WHERE DO YOU FIND NEW JAMS?" type="text" name="q6"><br>
+			<div class="form-group">
+				<h3 class="indivQuestion">Where do you find new music? (i.e. blogs, friends, Spotify, the radio, etc.).</h3>
+				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please be specific." name="q6"></textarea>
+			</div>
 
-	      <h3 class="indivQuestion"> What is your favorite Kanye West album? (Elaborate on your choice) </h3>
-	    <input class="submissionfield" placeholder = "PLEASE DON'T SAY YOU DON'T HAVE ONE" type="text" name="q7">
+			<div class="form-group">
+				<h3 class="indivQuestion">What is your favorite Kanye West album? (Elaborate on your choice)</h3>
+				<textarea class="submissionfield" rows="4" maxlength="1000" placeholder="Please limit your answer to a paragraph. Please be specific." name="q7"></textarea>
+			</div>
 
+	      <!-- <h3 class="indivQuestion"> What time commitments do you have for the 2016-2017 academic year?  </h3>
+	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q2"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> What skills and experiences can you bring to A&O? </h3>
+	    <input class="submissionfield" placeholder = "EXPLAIN YOUR TOP THREE" type="text" name="q3"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Every year, board members have the opportunity to act as our official photographer, documenting shows and the work we do behind the scenes. If you are interested in applying for this position, please provide a portfolio of your work along with your application.</h3>
+	    <input class="submissionfield" placeholder = "HOW HAVE WE BEEN DOING?" type="text" name="q4"><br> -->
+
+	      <!-- <h3 class="indivQuestion">  If you are a Freshman would you be interested in joining the Street Team? </h3>
+	    <input class="submissionfield" placeholder = "WHO'S UP NEXT?" type="text" name="q5"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> Where do you find new music? (i.e. blogs, friends, Spotify, the radio, etc.). </h3>
+	    <input class="submissionfield" placeholder = "WHERE DO YOU FIND NEW JAMS?" type="text" name="q6"><br> -->
+
+	      <!-- <h3 class="indivQuestion"> What is your favorite Kanye West album? (Elaborate on your choice) </h3>
+	    <input class="submissionfield" placeholder = "PLEASE DON'T SAY YOU DON'T HAVE ONE" type="text" name="q7"> -->
 	    <BR><BR><BR>
 
-	    <input type="submit" value="SUBMIT THIS SHIT">
+	    <button id="button" type="submit" value="SUBMIT THIS SHIT"></button>
 	</form>
 	</div>
 </div>
