@@ -98,49 +98,53 @@
 		}
 
 		button {
-  outline: none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius: 40px;
-  background: #fff;
-  border: 2px solid #ff00ff;
-  color: #ff00ff;
-  letter-spacing: 1px;
-  text-shadow: 0;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-button:hover {
-  color: white;
-  background: #ff00ff;
-}
-button:active {
-  letter-spacing: 2px;
-}
-button:after {
-  content: "SUBMIT";
-}
-
-.onclic {
-  width: 40px;
-  border-color: #bbbbbb;
-  border-width: 3px;
-  font-size: 0;
-  border-left-color: #ff00ff;
-  -webkit-animation: rotating 2s 0.25s linear infinite;
-          animation: rotating 2s 0.25s linear infinite;
-}
-.onclic:after {
-  content: "";
-}
-.onclic:hover {
-  color: #ff00ff;
-  background: white;
-}
+		  outline: none;
+		  height: 40px;
+		  text-align: center;
+		  width: 130px;
+		  border-radius: 40px;
+		  background: #fff;
+		  border: 2px solid #ff00ff;
+		  color: #ff00ff;
+		  letter-spacing: 1px;
+		  text-shadow: 0;
+		  font-size: 12px;
+		  font-weight: bold;
+		  cursor: pointer;
+		  -webkit-transition: all 0.25s ease;
+		  transition: all 0.25s ease;
+		}
+		button:hover {
+		  color: white;
+		  background: #ff00ff;
+		}
+		button:active {
+		  letter-spacing: 2px;
+		}
+		#committeebutton{
+			border: 2px solid #00ffff;
+			color: #00ffff;
+		}
+		#committeebutton:hover{
+			color: white;
+			background: #00ffff;
+		}
+		.onclic {
+		  width: 40px;
+		  border-color: #bbbbbb;
+		  border-width: 3px;
+		  font-size: 0;
+		  border-left-color: #ff00ff;
+		  -webkit-animation: rotating 2s 0.25s linear infinite;
+		          animation: rotating 2s 0.25s linear infinite;
+		}
+		.onclic:after {
+		  content: "";
+		}
+		.onclic:hover {
+		  color: #ff00ff;
+		  background: white;
+		}
 	</style>
 
 
@@ -152,7 +156,7 @@ button:after {
 	<div id = "questions" class = "col-md-8">
 		<h1><br> A&O GENERAL QUESTIONS </h1>
 
-		<form action="https://formspree.io/dgl@u.northwestern.edu"
+		<form action="https://formspree.io/virginiavankeuren2017@u.northwestern.edu"
 	      method="POST">
         <h3 class = "indivQuestion" > Let's get things started. What's your first and last name? </h3>
         <input class = "submissionfield shortQ" placeholder = "HI. MY FULL NAME IS:" type="text" name="name"><br>
@@ -170,7 +174,7 @@ button:after {
         </select><br><br>
 
         <h3 class = "indivQuestion" > Please rank your top 3 committee preferences. </h3>
-        <select class = "shortQ" name = "Committe1">
+        <select class = "shortQ" name = "Committee1">
 					<option> Please choose &#9660; </option>
           <option value = "Concerts"> Concerts </option>
           <option value = "Development"> Development</option>
@@ -181,7 +185,7 @@ button:after {
           <option value = "Productions"> Productions</option>
         </select><br>
 
-        <select class = "shortQ" name = "Committe2">
+        <select class = "shortQ" name = "Committee2">
 					<option> Please choose &#9660; </option>
           <option value = "Concerts"> Concerts </option>
           <option value = "Development"> Development</option>
@@ -192,7 +196,7 @@ button:after {
           <option value = "Productions"> Productions</option>
         </select><br>
 
-        <select class = "shortQ" name = "Committe3">
+        <select class = "shortQ" name = "Committee3">
 					<option> Please choose &#9660; </option>
           <option value = "Concerts"> Concerts </option>
           <option value = "Development"> Development </option>
@@ -205,30 +209,30 @@ button:after {
 
 			<div class="form-group">
 			  <h3 class="indivQuestion">Why do you want to be a part of A&O?</h3>
-			  <textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. You may elaborate on your committee choices." name="q1"></textarea>
+			  <textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. You may elaborate on your committee choices." name="WhyA&O"></textarea>
 			</div>
 
 			<div class="form-group">
 				<h3 class="indivQuestion">What time commitments do you have for the 2016-2017 academic year?</h3>
-				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please explain your top three." name="q2"></textarea>
+				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please explain your top three." name="timeCommitments"></textarea>
 			</div>
 
 			<div class="form-group">
 				<h3 class="indivQuestion">What skills and experiences can you bring to A&O?</h3>
-				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please be specific." name="q3"></textarea>
+				<textarea class="submissionfield" rows="10" maxlength="1500" placeholder="Please limit your answer to a paragraph. Please be specific." name="skills"></textarea>
 			</div>
 
 			<div class="form-group">
 				<h3 class="indivQuestion">Every year, board members have the opportunity to act as our official photographer, documenting shows and the work we do behind the scenes. If you are interested in applying for this position, please provide a portfolio of your work along with your application.</h3>
-				<textarea class="submissionfield" rows="4" maxlength="500" placeholder="Please limit your answer to a paragraph. Please include a URL to your work, or your email so that we may request your portfolio after you submit." name="q4"></textarea>
+				<textarea class="submissionfield" rows="4" maxlength="500" placeholder="Please limit your answer to a paragraph. Please include a URL to your work, or your email so that we may request your portfolio after you submit." name="photographer"></textarea>
 			</div>
 
 			<h3 class="indivQuestion">If you are a Freshman would you be interested in joining the Street Team?</h3>
 			<label class="checkbox-inline">
-			  <input type="checkbox" id="inlineCheckbox1" value="yes">Yes
+			  <input type="checkbox" id="inlineCheckbox1" name="yesStreetTeam" value="yes">Yes
 			</label>
 			<label class="checkbox-inline">
-			  <input type="checkbox" id="inlineCheckbox2" value="no">No
+			  <input type="checkbox" id="inlineCheckbox2" name="noStreetTeam" value="no">No
 			</label>
 
 			<div class="form-group">
@@ -258,10 +262,13 @@ button:after {
 
 	      <!-- <h3 class="indivQuestion"> What is your favorite Kanye West album? (Elaborate on your choice) </h3>
 	    <input class="submissionfield" placeholder = "PLEASE DON'T SAY YOU DON'T HAVE ONE" type="text" name="q7"> -->
-	    <BR><BR><BR>
-
-	    <button id="button" type="submit" value="SUBMIT THIS SHIT"></button>
+	    <BR>
+	    <button id="button" type="submit" value="Submit">SUBMIT</button>
 	</form>
+			<hr>
+			<h4>Congrats. You've completed the first step! Now move on to step two.</h4>
+			<br>
+				<button onclick="window.location.href='/application'" id="committeebutton">COMMITTEE QUESTIONS</button>
 	</div>
 </div>
 
