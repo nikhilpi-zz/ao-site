@@ -1,6 +1,5 @@
 <template name = "mandm">
 
-
 	<style>
 	.submissionfield {
 		width: 75%;
@@ -26,6 +25,9 @@
 		font-family: "ao light";
 		font-size: 18px;
 		text-align: left;
+	}
+	h4{
+		line-height: 160%;
 	}
 
 	#lefty {
@@ -196,8 +198,10 @@
 				<h2>Designer</h2>
 
 				<div class="form-group">
-					<h3 class="indivQuestion">Create a poster advertising one of the following: Years & Years, Fetty Wap, or FKA Twigs. JPG or PDF, please. Attach the  le to your email along with your application. </h3>
-		    <input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="poster">
+					<h3 class="indivQuestion">Create a poster advertising one of the following: Years & Years, Fetty Wap, or FKA Twigs. JPG or PDF, please. Attach the  le to your email along with your application.</h3>
+					<label>(Email your files to M&M Co-Director: virginiavankeuren2017@u.northwestern.edu)</label>
+		    <!-- <input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="poster"> -->
+				<!-- <input name="image" type="file" /> -->
 				</div>
 
 				<hr>
@@ -205,8 +209,9 @@
 				<h2>Web Developer</h2>
 
 				<div class="form-group">
-					<h3 class="indivQuestion">If you have coding experience, visit www.aoproductions.net to get a feel for our style and design a splash page for a show downtown at the Riviera Theatre featuring Calvin Harris. (Email your files to virginiavankeuren2017@u.northwestern.edu)</h3>
-				<input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="websitedesign"><br>
+					<h3 class="indivQuestion">If you have coding experience, visit www.aoproductions.net to get a feel for our style and design a splash page for a show downtown at the Riviera Theatre featuring Calvin Harris.</h3>
+					<label>(Email your files to M&M Co-Director: virginiavankeuren2017@u.northwestern.edu)</label>
+				<!-- <input id = "submit" placeholder = "Submit a file: pdf/jpg" type="file" name="websitedesign"><br> -->
 				</div>
 
 				<div class="form-group">
@@ -237,7 +242,7 @@
 	    <button id="button" type="submit" value="Submit">SUBMIT</button>
 	</form>
 			<hr>
-			<h4>Congrats. You've completed the M&M Application! You shall hear back from us by October 16.</h4>
+			<h4>Congrats. You've completed the M&M Application! <br>You shall hear back from us by October 16.</h4>
 			<br>
 				<button onclick="window.location.href='/application'" id="committeebutton">BACK TO QUESTIONS</button>
 	</div>
