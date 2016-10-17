@@ -6,70 +6,59 @@ Template['about'].helpers({
         label: 'magenta_label',
         members: [
           {
-            name: 'Cory Goldman',
+            name: 'Caroline Kelly',
             position: 'Co-Chair',
-            img: 'CoryGoldman.jpg'
+            img: 'Caroline.jpg'
           },
           {
-            name: 'Danny Brennan',
+            name: 'Will Corvin',
             position: 'Co-Chair',
-            img: 'DannyBrennan.jpg'
-          },
-          {
-            name: 'Ben Shear',
+            img: 'Will.jpg'
+          },{
+            name: 'Ali Lefkowitz',
             position: 'Concerts',
-            img: 'BenShear.jpg'
-          },
-          {
-            name: 'Blake Fromkin',
-            position: 'Films',
-            img: 'BlakeFromkin.jpg'
-          },
-          {
+            img: 'Ali.jpg'
+          },{
             name: 'Danny Carlon',
             position: 'Films',
-            img: 'DannyCarlon.jpg'
+            img: 'Danny.jpg'
           },
           {
-            name: 'Kate Anderson',
+            name: 'Joe Rosenbaum',
+            position: 'Films',
+            img: 'Joe.jpg'
+          },
+          {
+            name: 'Ashley Lloyd',
             position: 'Finance',
-            img: 'KateAnderson.jpg'
-          },
-          {
-            name: 'Olly Goodman',
+            img: 'Ashley.jpg'
+          },{
+            name: 'Lydia Weber',
             position: 'Development',
-            img: 'OllyGoodman.png'
-          },
-          {
-            name: 'Caroline Fearon',
-            position: 'Marketing & Media',
-            img: 'CarolineFearon.jpg'
-          },
-          {
-            name: 'Caroline Kelly',
-            position: 'Marketing & Media',
-            img: 'CarolineKelly.jpg'
-          },
-          {
+            img: 'Lydia.jpeg'
+          },{
             name: 'Virginia Van Keuren',
             position: 'Marketing & Media',
-            img: 'VirginiaVanKeuren.jpg'
+            img: 'Virginia.jpg'
           },
           {
-            name: 'Max Goldberg',
+            name: 'Justine Yucesan',
+            position: 'Marketing & Media',
+            img: 'Justine.png'
+          },
+          {
+            name: 'Ethan Shaw',
             position: 'Productions',
-            img: 'MaxGoldberg.jpg'
-          },
-          {
-            name: 'Eytan Boclin',
+            img: 'Ethan.jpg'
+          },{
+            name: 'Maddie Thomas',
             position: 'Speakers',
-            img: 'EytanBoclin.jpg'
-          },
-          {
-            name: 'Lauren Hutton-Work',
+            img: 'Maddie.jpg'
+          },{
+            name: 'Mai Schotz',
             position: 'Community Engagement',
-            img: 'LaurenHutton-Work.jpg'
-          }
+            img: 'Mai.jpg'
+          },
         ]
       }
     ]
